@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 21);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -69,6 +69,55 @@
 
 "use strict";
 
+
+if (true) {
+  module.exports = __webpack_require__(13);
+} else {
+  module.exports = require('./dist/react-hot-loader.development.js');
+}
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function () {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function get() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function get() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+(function () {
+    var enterModule = __webpack_require__(0).enterModule;
+
+    enterModule && enterModule(module);
+})();
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -255,27 +304,58 @@ process.chdir = function (dir) {
 process.umask = function () {
     return 0;
 };
+;
+
+(function () {
+    var reactHotLoader = __webpack_require__(0).default;
+
+    var leaveModule = __webpack_require__(0).leaveModule;
+
+    if (!reactHotLoader) {
+        return;
+    }
+
+    reactHotLoader.register(process, 'process', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(cachedSetTimeout, 'cachedSetTimeout', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(cachedClearTimeout, 'cachedClearTimeout', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(defaultSetTimout, 'defaultSetTimout', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(defaultClearTimeout, 'defaultClearTimeout', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(runTimeout, 'runTimeout', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(runClearTimeout, 'runClearTimeout', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(queue, 'queue', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(draining, 'draining', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(currentQueue, 'currentQueue', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(queueIndex, 'queueIndex', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(cleanUpNextTick, 'cleanUpNextTick', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(drainQueue, 'drainQueue', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(Item, 'Item', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    reactHotLoader.register(noop, 'noop', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/process/browser.js');
+    leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 1 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(16);
+  module.exports = __webpack_require__(23);
 } else {
-  module.exports = __webpack_require__(17);
+  module.exports = __webpack_require__(24);
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 2 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
+/* WEBPACK VAR INJECTION */(function(module, process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
  * This source code is licensed under the MIT license found in the
@@ -295,6 +375,12 @@ if (process.env.NODE_ENV === 'production') {
  * The invariant message will be stripped in production, but the invariant
  * will remain to ensure logic does not differ in production.
  */
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
 
 var validateFormat = function validateFormat(format) {};
 
@@ -328,14 +414,31 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(validateFormat, 'validateFormat', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/invariant.js');
+  reactHotLoader.register(invariant, 'invariant', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/invariant.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module), __webpack_require__(2)))
 
 /***/ }),
-/* 3 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(module) {
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -345,6 +448,12 @@ module.exports = invariant;
  *
  * 
  */
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
 
 function makeEmptyFunction(arg) {
   return function () {
@@ -371,13 +480,31 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(makeEmptyFunction, "makeEmptyFunction", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/emptyFunction.js");
+  reactHotLoader.register(emptyFunction, "emptyFunction", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/emptyFunction.js");
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 4 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/*
+/* WEBPACK VAR INJECTION */(function(module) {/*
 object-assign
 (c) Sindre Sorhus
 @license MIT
@@ -385,6 +512,12 @@ object-assign
 
 
 /* eslint-disable no-unused-vars */
+
+(function () {
+	var enterModule = __webpack_require__(0).enterModule;
+
+	enterModule && enterModule(module);
+})();
 
 var getOwnPropertySymbols = Object.getOwnPropertySymbols;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -467,13 +600,34 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 	return to;
 };
+;
+
+(function () {
+	var reactHotLoader = __webpack_require__(0).default;
+
+	var leaveModule = __webpack_require__(0).leaveModule;
+
+	if (!reactHotLoader) {
+		return;
+	}
+
+	reactHotLoader.register(getOwnPropertySymbols, 'getOwnPropertySymbols', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/object-assign/index.js');
+	reactHotLoader.register(hasOwnProperty, 'hasOwnProperty', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/object-assign/index.js');
+	reactHotLoader.register(propIsEnumerable, 'propIsEnumerable', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/object-assign/index.js');
+	reactHotLoader.register(toObject, 'toObject', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/object-assign/index.js');
+	reactHotLoader.register(shouldUseNative, 'shouldUseNative', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/object-assign/index.js');
+	leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
+/* WEBPACK VAR INJECTION */(function(module, process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
  * This source code is licensed under the MIT license found in the
@@ -483,6 +637,12 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
 var emptyObject = {};
 
 if (process.env.NODE_ENV !== 'production') {
@@ -490,14 +650,30 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(emptyObject, 'emptyObject', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/emptyObject.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module), __webpack_require__(2)))
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
+/* WEBPACK VAR INJECTION */(function(module, process) {/**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
  * This source code is licensed under the MIT license found in the
@@ -507,7 +683,13 @@ module.exports = emptyObject;
 
 
 
-var emptyFunction = __webpack_require__(3);
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+var emptyFunction = __webpack_require__(5);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -559,330 +741,37 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = warning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+;
 
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
 
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+  var leaveModule = __webpack_require__(0).leaveModule;
 
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-if (process.env.NODE_ENV !== 'production') {
-  var invariant = __webpack_require__(2);
-  var warning = __webpack_require__(6);
-  var ReactPropTypesSecret = __webpack_require__(18);
-  var loggedTypeFailures = {};
-}
-
-/**
- * Assert that the values match with the type specs.
- * Error messages are memorized and will only be shown once.
- *
- * @param {object} typeSpecs Map of name to a ReactPropType
- * @param {object} values Runtime values that need to be type-checked
- * @param {string} location e.g. "prop", "context", "child context"
- * @param {string} componentName Name of the component for error messages.
- * @param {?Function} getStack Returns the component stack.
- * @private
- */
-function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-  if (process.env.NODE_ENV !== 'production') {
-    for (var typeSpecName in typeSpecs) {
-      if (typeSpecs.hasOwnProperty(typeSpecName)) {
-        var error;
-        // Prop type validation may throw. In case they do, we don't want to
-        // fail the render phase where it didn't fail before. So we log it.
-        // After these have been cleaned up, we'll let them throw.
-        try {
-          // This is intentionally an invariant that gets caught. It's the same
-          // behavior as without this statement except with a better message.
-          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'the `prop-types` package, but received `%s`.', componentName || 'React class', location, typeSpecName, _typeof(typeSpecs[typeSpecName]));
-          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
-        } catch (ex) {
-          error = ex;
-        }
-        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error === 'undefined' ? 'undefined' : _typeof(error));
-        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
-          // Only monitor this failure once because there tends to be a lot of the
-          // same error.
-          loggedTypeFailures[error.message] = true;
-
-          var stack = getStack ? getStack() : '';
-
-          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
-        }
-      }
-    }
+  if (!reactHotLoader) {
+    return;
   }
-}
 
-module.exports = checkPropTypes;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+  reactHotLoader.register(warning, 'warning', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/warning.js');
+  reactHotLoader.register(printWarning, 'printWarning', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/warning.js');
+  leaveModule(module);
+})();
 
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
-
-/**
- * Simple, lightweight module assisting with the detection and context of
- * Worker. Helps avoid circular dependencies and allows code to reason about
- * whether or not they are in a Worker, even if they never include the main
- * `ReactWorker` dependency.
- */
-var ExecutionEnvironment = {
-
-  canUseDOM: canUseDOM,
-
-  canUseWorkers: typeof Worker !== 'undefined',
-
-  canUseEventListeners: canUseDOM && !!(window.addEventListener || window.attachEvent),
-
-  canUseViewport: canUseDOM && !!window.screen,
-
-  isInWorker: !canUseDOM // For now, this is true - might change in the future.
-
-};
-
-module.exports = ExecutionEnvironment;
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module), __webpack_require__(2)))
 
 /***/ }),
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
 
+(function () {
+	var enterModule = __webpack_require__(0).enterModule;
 
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @typechecks
- */
-
-/* eslint-disable fb-www/typeof-undefined */
-
-/**
- * Same as document.activeElement but wraps in a try-catch block. In IE it is
- * not safe to call document.activeElement if there is nothing focused.
- *
- * The activeElement will be null only if the document or document body is not
- * yet defined.
- *
- * @param {?DOMDocument} doc Defaults to current document.
- * @return {?DOMElement}
- */
-
-function getActiveElement(doc) /*?DOMElement*/{
-  doc = doc || (typeof document !== 'undefined' ? document : undefined);
-  if (typeof doc === 'undefined') {
-    return null;
-  }
-  try {
-    return doc.activeElement || doc.body;
-  } catch (e) {
-    return doc.body;
-  }
-}
-
-module.exports = getActiveElement;
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @typechecks
- * 
- */
-
-/*eslint-disable no-self-compare */
-
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-
-/**
- * inlined Object.is polyfill to avoid requiring consumers ship their own
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
- */
-function is(x, y) {
-  // SameValue algorithm
-  if (x === y) {
-    // Steps 1-5, 7-10
-    // Steps 6.b-6.e: +0 != -0
-    // Added the nonzero y check to make Flow happy, but it is redundant
-    return x !== 0 || y !== 0 || 1 / x === 1 / y;
-  } else {
-    // Step 6.a: NaN == NaN
-    return x !== x && y !== y;
-  }
-}
-
-/**
- * Performs equality by iterating through keys on an object and returning false
- * when any key has values which are not strictly equal between the arguments.
- * Returns true when the values of all keys are strictly equal.
- */
-function shallowEqual(objA, objB) {
-  if (is(objA, objB)) {
-    return true;
-  }
-
-  if ((typeof objA === 'undefined' ? 'undefined' : _typeof(objA)) !== 'object' || objA === null || (typeof objB === 'undefined' ? 'undefined' : _typeof(objB)) !== 'object' || objB === null) {
-    return false;
-  }
-
-  var keysA = Object.keys(objA);
-  var keysB = Object.keys(objB);
-
-  if (keysA.length !== keysB.length) {
-    return false;
-  }
-
-  // Test for A's keys different from B.
-  for (var i = 0; i < keysA.length; i++) {
-    if (!hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-module.exports = shallowEqual;
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- */
-
-var isTextNode = __webpack_require__(21);
-
-/*eslint-disable no-bitwise */
-
-/**
- * Checks if a given DOM node contains or is another DOM node.
- */
-function containsNode(outerNode, innerNode) {
-  if (!outerNode || !innerNode) {
-    return false;
-  } else if (outerNode === innerNode) {
-    return true;
-  } else if (isTextNode(outerNode)) {
-    return false;
-  } else if (isTextNode(innerNode)) {
-    return containsNode(outerNode, innerNode.parentNode);
-  } else if ('contains' in outerNode) {
-    return outerNode.contains(innerNode);
-  } else if (outerNode.compareDocumentPosition) {
-    return !!(outerNode.compareDocumentPosition(innerNode) & 16);
-  } else {
-    return false;
-  }
-}
-
-module.exports = containsNode;
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(30);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(14)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--1-1!./App.css", function() {
-		var newContent = require("!!../../../node_modules/css-loader/index.js??ref--1-1!./App.css");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
+	enterModule && enterModule(module);
+})();
 
 /*
 	MIT License http://www.opensource.org/licenses/mit-license.php
@@ -958,9 +847,27 @@ function toComment(sourceMap) {
 
 	return '/*# ' + data + ' */';
 }
+;
+
+(function () {
+	var reactHotLoader = __webpack_require__(0).default;
+
+	var leaveModule = __webpack_require__(0).leaveModule;
+
+	if (!reactHotLoader) {
+		return;
+	}
+
+	reactHotLoader.register(cssWithMappingToString, "cssWithMappingToString", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/css-loader/lib/css-base.js");
+	reactHotLoader.register(toComment, "toComment", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/css-loader/lib/css-base.js");
+	leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 14 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -1026,7 +933,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(31);
+var	fixUrls = __webpack_require__(47);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -1346,34 +1253,690 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module, process) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+if (process.env.NODE_ENV !== 'production') {
+  var invariant = __webpack_require__(4);
+  var warning = __webpack_require__(8);
+  var ReactPropTypesSecret = __webpack_require__(12);
+  var loggedTypeFailures = {};
+}
+
+/**
+ * Assert that the values match with the type specs.
+ * Error messages are memorized and will only be shown once.
+ *
+ * @param {object} typeSpecs Map of name to a ReactPropType
+ * @param {object} values Runtime values that need to be type-checked
+ * @param {string} location e.g. "prop", "context", "child context"
+ * @param {string} componentName Name of the component for error messages.
+ * @param {?Function} getStack Returns the component stack.
+ * @private
+ */
+function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+  if (process.env.NODE_ENV !== 'production') {
+    for (var typeSpecName in typeSpecs) {
+      if (typeSpecs.hasOwnProperty(typeSpecName)) {
+        var error;
+        // Prop type validation may throw. In case they do, we don't want to
+        // fail the render phase where it didn't fail before. So we log it.
+        // After these have been cleaned up, we'll let them throw.
+        try {
+          // This is intentionally an invariant that gets caught. It's the same
+          // behavior as without this statement except with a better message.
+          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'the `prop-types` package, but received `%s`.', componentName || 'React class', location, typeSpecName, _typeof(typeSpecs[typeSpecName]));
+          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+        } catch (ex) {
+          error = ex;
+        }
+        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error === 'undefined' ? 'undefined' : _typeof(error));
+        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
+          // Only monitor this failure once because there tends to be a lot of the
+          // same error.
+          loggedTypeFailures[error.message] = true;
+
+          var stack = getStack ? getStack() : '';
+
+          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
+        }
+      }
+    }
+  }
+}
+
+module.exports = checkPropTypes;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(loggedTypeFailures, 'loggedTypeFailures', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/prop-types/checkPropTypes.js');
+  reactHotLoader.register(checkPropTypes, 'checkPropTypes', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/prop-types/checkPropTypes.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module), __webpack_require__(2)))
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+module.exports = ReactPropTypesSecret;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(ReactPropTypesSecret, 'ReactPropTypesSecret', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/prop-types/lib/ReactPropTypesSecret.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+function _interopDefault(e) {
+  return e && "object" == (typeof e === "undefined" ? "undefined" : _typeof(e)) && "default" in e ? e.default : e;
+}Object.defineProperty(exports, "__esModule", { value: !0 });var React = _interopDefault(__webpack_require__(3)),
+    classCallCheck = function classCallCheck(e, t) {
+  if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
+},
+    inherits = function inherits(e, t) {
+  if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + (typeof t === "undefined" ? "undefined" : _typeof(t)));e.prototype = Object.create(t && t.prototype, { constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 } }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t);
+},
+    possibleConstructorReturn = function possibleConstructorReturn(e, t) {
+  if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return !t || "object" != (typeof t === "undefined" ? "undefined" : _typeof(t)) && "function" != typeof t ? e : t;
+},
+    AppContainer = function (e) {
+  function t() {
+    return classCallCheck(this, t), possibleConstructorReturn(this, e.apply(this, arguments));
+  }return inherits(t, e), t.prototype.render = function () {
+    return React.Children.only(this.props.children);
+  }, t;
+}(React.Component),
+    hot_prod = function hot_prod() {
+  return function (e) {
+    return e;
+  };
+},
+    areComponentsEqual = function areComponentsEqual(e, t) {
+  return e === t;
+},
+    setConfig = function setConfig() {};exports.AppContainer = AppContainer, exports.hot = hot_prod, exports.areComponentsEqual = areComponentsEqual, exports.setConfig = setConfig;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(_interopDefault, "_interopDefault", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.production.min.js");
+  reactHotLoader.register(React, "React", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.production.min.js");
+  reactHotLoader.register(classCallCheck, "classCallCheck", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.production.min.js");
+  reactHotLoader.register(inherits, "inherits", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.production.min.js");
+  reactHotLoader.register(possibleConstructorReturn, "possibleConstructorReturn", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.production.min.js");
+  reactHotLoader.register(AppContainer, "AppContainer", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.production.min.js");
+  reactHotLoader.register(hot_prod, "hot_prod", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.production.min.js");
+  reactHotLoader.register(areComponentsEqual, "areComponentsEqual", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.production.min.js");
+  reactHotLoader.register(setConfig, "setConfig", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.production.min.js");
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+
+/**
+ * Simple, lightweight module assisting with the detection and context of
+ * Worker. Helps avoid circular dependencies and allows code to reason about
+ * whether or not they are in a Worker, even if they never include the main
+ * `ReactWorker` dependency.
+ */
+var ExecutionEnvironment = {
+
+  canUseDOM: canUseDOM,
+
+  canUseWorkers: typeof Worker !== 'undefined',
+
+  canUseEventListeners: canUseDOM && !!(window.addEventListener || window.attachEvent),
+
+  canUseViewport: canUseDOM && !!window.screen,
+
+  isInWorker: !canUseDOM // For now, this is true - might change in the future.
+
+};
+
+module.exports = ExecutionEnvironment;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(canUseDOM, 'canUseDOM', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/ExecutionEnvironment.js');
+  reactHotLoader.register(ExecutionEnvironment, 'ExecutionEnvironment', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/ExecutionEnvironment.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ }),
 /* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
 
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * @typechecks
+ */
 
-var _react = __webpack_require__(1);
+/* eslint-disable fb-www/typeof-undefined */
 
-var _react2 = _interopRequireDefault(_react);
+/**
+ * Same as document.activeElement but wraps in a try-catch block. In IE it is
+ * not safe to call document.activeElement if there is nothing focused.
+ *
+ * The activeElement will be null only if the document or document body is not
+ * yet defined.
+ *
+ * @param {?DOMDocument} doc Defaults to current document.
+ * @return {?DOMElement}
+ */
 
-var _reactDom = __webpack_require__(19);
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
 
-var _reactDom2 = _interopRequireDefault(_reactDom);
+  enterModule && enterModule(module);
+})();
 
-var _App = __webpack_require__(28);
+function getActiveElement(doc) /*?DOMElement*/{
+  doc = doc || (typeof document !== 'undefined' ? document : undefined);
+  if (typeof doc === 'undefined') {
+    return null;
+  }
+  try {
+    return doc.activeElement || doc.body;
+  } catch (e) {
+    return doc.body;
+  }
+}
 
-var _App2 = _interopRequireDefault(_App);
+module.exports = getActiveElement;
+;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
 
-_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('app'));
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(getActiveElement, 'getActiveElement', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/getActiveElement.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.3.2
+/* WEBPACK VAR INJECTION */(function(module) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * @typechecks
+ * 
+ */
+
+/*eslint-disable no-self-compare */
+
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+/**
+ * inlined Object.is polyfill to avoid requiring consumers ship their own
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+ */
+function is(x, y) {
+  // SameValue algorithm
+  if (x === y) {
+    // Steps 1-5, 7-10
+    // Steps 6.b-6.e: +0 != -0
+    // Added the nonzero y check to make Flow happy, but it is redundant
+    return x !== 0 || y !== 0 || 1 / x === 1 / y;
+  } else {
+    // Step 6.a: NaN == NaN
+    return x !== x && y !== y;
+  }
+}
+
+/**
+ * Performs equality by iterating through keys on an object and returning false
+ * when any key has values which are not strictly equal between the arguments.
+ * Returns true when the values of all keys are strictly equal.
+ */
+function shallowEqual(objA, objB) {
+  if (is(objA, objB)) {
+    return true;
+  }
+
+  if ((typeof objA === 'undefined' ? 'undefined' : _typeof(objA)) !== 'object' || objA === null || (typeof objB === 'undefined' ? 'undefined' : _typeof(objB)) !== 'object' || objB === null) {
+    return false;
+  }
+
+  var keysA = Object.keys(objA);
+  var keysB = Object.keys(objB);
+
+  if (keysA.length !== keysB.length) {
+    return false;
+  }
+
+  // Test for A's keys different from B.
+  for (var i = 0; i < keysA.length; i++) {
+    if (!hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+module.exports = shallowEqual;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(hasOwnProperty, 'hasOwnProperty', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/shallowEqual.js');
+  reactHotLoader.register(is, 'is', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/shallowEqual.js');
+  reactHotLoader.register(shallowEqual, 'shallowEqual', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/shallowEqual.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * 
+ */
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+var isTextNode = __webpack_require__(37);
+
+/*eslint-disable no-bitwise */
+
+/**
+ * Checks if a given DOM node contains or is another DOM node.
+ */
+function containsNode(outerNode, innerNode) {
+  if (!outerNode || !innerNode) {
+    return false;
+  } else if (outerNode === innerNode) {
+    return true;
+  } else if (isTextNode(outerNode)) {
+    return false;
+  } else if (isTextNode(innerNode)) {
+    return containsNode(outerNode, innerNode.parentNode);
+  } else if ('contains' in outerNode) {
+    return outerNode.contains(innerNode);
+  } else if (outerNode.compareDocumentPosition) {
+    return !!(outerNode.compareDocumentPosition(innerNode) & 16);
+  } else {
+    return false;
+  }
+}
+
+module.exports = containsNode;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(containsNode, 'containsNode', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/containsNode.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(46);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(10)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--1-1!./App.css", function() {
+		var newContent = require("!!../../../node_modules/css-loader/index.js??ref--1-1!./App.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+// Unique ID creation requires a high quality random # generator.  In the
+// browser this is a little complicated due to unknown quality of Math.random()
+// and inconsistent support for the `crypto` API.  We do the best we can via
+// feature-detection
+
+// getRandomValues needs to be invoked in a context where "this" is a Crypto implementation.
+var getRandomValues = typeof crypto != 'undefined' && crypto.getRandomValues.bind(crypto) || typeof msCrypto != 'undefined' && msCrypto.getRandomValues.bind(msCrypto);
+if (getRandomValues) {
+  // WHATWG crypto RNG - http://wiki.whatwg.org/wiki/Crypto
+  var rnds8 = new Uint8Array(16); // eslint-disable-line no-undef
+
+  module.exports = function whatwgRNG() {
+    getRandomValues(rnds8);
+    return rnds8;
+  };
+} else {
+  // Math.random()-based (RNG)
+  //
+  // If all else fails, use Math.random().  It's fast, but is of unspecified
+  // quality.
+  var rnds = new Array(16);
+
+  module.exports = function mathRNG() {
+    for (var i = 0, r; i < 16; i++) {
+      if ((i & 0x03) === 0) r = Math.random() * 0x100000000;
+      rnds[i] = r >>> ((i & 0x03) << 3) & 0xff;
+    }
+
+    return rnds;
+  };
+}
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(getRandomValues, 'getRandomValues', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/uuid/lib/rng-browser.js');
+  reactHotLoader.register(rnds8, 'rnds8', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/uuid/lib/rng-browser.js');
+  reactHotLoader.register(rnds, 'rnds', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/uuid/lib/rng-browser.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+/**
+ * Convert array of 16 byte values to UUID string format of the form:
+ * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ */
+var byteToHex = [];
+for (var i = 0; i < 256; ++i) {
+  byteToHex[i] = (i + 0x100).toString(16).substr(1);
+}
+
+function bytesToUuid(buf, offset) {
+  var i = offset || 0;
+  var bth = byteToHex;
+  return bth[buf[i++]] + bth[buf[i++]] + bth[buf[i++]] + bth[buf[i++]] + '-' + bth[buf[i++]] + bth[buf[i++]] + '-' + bth[buf[i++]] + bth[buf[i++]] + '-' + bth[buf[i++]] + bth[buf[i++]] + '-' + bth[buf[i++]] + bth[buf[i++]] + bth[buf[i++]] + bth[buf[i++]] + bth[buf[i++]] + bth[buf[i++]];
+}
+
+module.exports = bytesToUuid;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(byteToHex, 'byteToHex', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/uuid/lib/bytesToUuid.js');
+  reactHotLoader.register(i, 'i', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/uuid/lib/bytesToUuid.js');
+  reactHotLoader.register(bytesToUuid, 'bytesToUuid', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/uuid/lib/bytesToUuid.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(22);
+module.exports = __webpack_require__(34);
+
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(13);
+} else {
+  module.exports = __webpack_require__(25);
+}
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {/** @license React v16.3.2
  * react.production.min.js
  *
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -1386,10 +1949,16 @@ _reactDom2.default.render(_react2.default.createElement(_App2.default, null), do
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var m = __webpack_require__(4),
-    n = __webpack_require__(2),
-    p = __webpack_require__(5),
-    q = __webpack_require__(3),
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+var m = __webpack_require__(6),
+    n = __webpack_require__(4),
+    p = __webpack_require__(7),
+    q = __webpack_require__(5),
     r = "function" === typeof Symbol && Symbol["for"],
     t = r ? Symbol["for"]("react.element") : 60103,
     u = r ? Symbol["for"]("react.portal") : 60106,
@@ -1502,9 +2071,59 @@ var W = { Children: { map: function map(a, b, e) {
   }, isValidElement: M, version: "16.3.2", __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: { ReactCurrentOwner: I, assign: m } },
     X = Object.freeze({ default: W }),
     Y = X && W || X;module.exports = Y["default"] ? Y["default"] : Y;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(r, "r", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(t, "t", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(u, "u", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(v, "v", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(w, "w", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(x, "x", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(y, "y", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(z, "z", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(A, "A", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(B, "B", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(C, "C", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(D, "D", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(E, "E", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(F, "F", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(G, "G", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(H, "H", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(I, "I", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(J, "J", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(K, "K", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(L, "L", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(M, "M", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(escape, "escape", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(N, "N", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(O, "O", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(P, "P", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(Q, "Q", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(R, "R", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(S, "S", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(T, "T", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(U, "U", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(V, "V", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(W, "W", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(X, "X", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  reactHotLoader.register(Y, "Y", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react/cjs/react.production.min.js");
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 17 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1525,12 +2144,12 @@ if (process.env.NODE_ENV !== "production") {
   (function () {
     'use strict';
 
-    var _assign = __webpack_require__(4);
-    var invariant = __webpack_require__(2);
-    var emptyObject = __webpack_require__(5);
-    var warning = __webpack_require__(6);
-    var emptyFunction = __webpack_require__(3);
-    var checkPropTypes = __webpack_require__(7);
+    var _assign = __webpack_require__(6);
+    var invariant = __webpack_require__(4);
+    var emptyObject = __webpack_require__(7);
+    var warning = __webpack_require__(8);
+    var emptyFunction = __webpack_require__(5);
+    var checkPropTypes = __webpack_require__(11);
 
     // TODO: this is special because it gets imported during build.
 
@@ -2918,10 +3537,2398 @@ if (process.env.NODE_ENV !== "production") {
     module.exports = react;
   })();
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 18 */
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+function _interopDefault(ex) {
+  return ex && (typeof ex === 'undefined' ? 'undefined' : _typeof2(ex)) === 'object' && 'default' in ex ? ex['default'] : ex;
+}
+
+var React = __webpack_require__(3);
+var React__default = _interopDefault(React);
+var shallowEqual = _interopDefault(__webpack_require__(26));
+var levenshtein = _interopDefault(__webpack_require__(27));
+var PropTypes = _interopDefault(__webpack_require__(30));
+var hoistNonReactStatic = _interopDefault(__webpack_require__(33));
+
+/* eslint-disable no-underscore-dangle */
+
+var isCompositeComponent = function isCompositeComponent(type) {
+  return typeof type === 'function';
+};
+
+var getComponentDisplayName = function getComponentDisplayName(type) {
+  return type.displayName || type.name || 'Component';
+};
+
+var getInternalInstance = function getInternalInstance(instance) {
+  return instance._reactInternalFiber || // React 16
+  instance._reactInternalInstance || // React 15
+  null;
+};
+
+var updateInstance = function updateInstance(instance) {
+  var updater = instance.updater,
+      forceUpdate = instance.forceUpdate;
+
+  if (typeof forceUpdate === 'function') {
+    instance.forceUpdate();
+  } else if (updater && typeof updater.enqueueForceUpdate === 'function') {
+    updater.enqueueForceUpdate(instance);
+  }
+};
+
+var isFragmentNode = function isFragmentNode(_ref) {
+  var type = _ref.type;
+  return React__default.Fragment && type === React__default.Fragment;
+};
+
+var generation = 1;
+
+var increment = function increment() {
+  return generation++;
+};
+var get = function get() {
+  return generation;
+};
+
+var PREFIX = '__reactstandin__';
+var PROXY_KEY = PREFIX + 'key';
+var GENERATION = PREFIX + 'proxyGeneration';
+var REGENERATE_METHOD = PREFIX + 'regenerateByEval';
+var UNWRAP_PROXY = PREFIX + 'getCurrent';
+var CACHED_RESULT = PREFIX + 'cachedResult';
+var PROXY_IS_MOUNTED = PREFIX + 'isMounted';
+
+var configuration = {
+  logLevel: 'error'
+};
+
+/* eslint-disable no-console */
+
+var logger = {
+  debug: function debug() {
+    if (['debug'].includes(configuration.logLevel)) {
+      var _console;
+
+      (_console = console).debug.apply(_console, arguments);
+    }
+  },
+  log: function log() {
+    if (['debug', 'log'].includes(configuration.logLevel)) {
+      var _console2;
+
+      (_console2 = console).log.apply(_console2, arguments);
+    }
+  },
+  warn: function warn() {
+    if (['debug', 'log', 'warn'].includes(configuration.logLevel)) {
+      var _console3;
+
+      (_console3 = console).warn.apply(_console3, arguments);
+    }
+  },
+  error: function error() {
+    if (['debug', 'log', 'warn', 'error'].includes(configuration.logLevel)) {
+      var _console4;
+
+      (_console4 = console).error.apply(_console4, arguments);
+    }
+  }
+};
+
+var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+  return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+} : function (obj) {
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+};
+
+var classCallCheck = function classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+var inherits = function inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === 'undefined' ? 'undefined' : _typeof2(superClass)));
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+};
+
+var possibleConstructorReturn = function possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return call && ((typeof call === 'undefined' ? 'undefined' : _typeof2(call)) === "object" || typeof call === "function") ? call : self;
+};
+
+/* eslint-disable no-eval, func-names */
+
+function getDisplayName(Component) {
+  var displayName = Component.displayName || Component.name;
+  return displayName && displayName !== 'ReactComponent' ? displayName : 'Unknown';
+}
+
+var reactLifeCycleMountMethods = ['componentWillMount', 'componentDidMount'];
+
+function isReactClass(Component) {
+  return Component.prototype && (Component.prototype.isReactComponent || Component.prototype.componentWillMount || Component.prototype.componentWillUnmount || Component.prototype.componentDidMount || Component.prototype.componentDidUnmount || Component.prototype.render);
+}
+
+function safeReactConstructor(Component, lastInstance) {
+  try {
+    if (lastInstance) {
+      return new Component(lastInstance.props, lastInstance.context);
+    }
+    return new Component({}, {});
+  } catch (e) {
+    // some components, like Redux connect could not be created without proper context
+  }
+  return null;
+}
+
+function isNativeFunction(fn) {
+  return typeof fn === 'function' ? fn.toString().indexOf('[native code]') > 0 : false;
+}
+
+var identity = function identity(a) {
+  return a;
+};
+var indirectEval = eval;
+
+var doesSupportClasses = function () {
+  try {
+    indirectEval('class Test {}');
+    return true;
+  } catch (e) {
+    return false;
+  }
+}();
+
+var ES6ProxyComponentFactory = doesSupportClasses && indirectEval('\n(function(InitialParent, postConstructionAction) {\n  return class ProxyComponent extends InitialParent {\n    constructor(props, context) {\n      super(props, context)\n      postConstructionAction.call(this)\n    }\n  }\n})\n');
+
+var ES5ProxyComponentFactory = function ES5ProxyComponentFactory(InitialParent, postConstructionAction) {
+  function ProxyComponent(props, context) {
+    InitialParent.call(this, props, context);
+    postConstructionAction.call(this);
+  }
+  ProxyComponent.prototype = Object.create(InitialParent.prototype);
+  Object.setPrototypeOf(ProxyComponent, InitialParent);
+  return ProxyComponent;
+};
+
+var isReactComponentInstance = function isReactComponentInstance(el) {
+  return el && (typeof el === 'undefined' ? 'undefined' : _typeof(el)) === 'object' && !el.type && el.render;
+};
+
+var proxyClassCreator = doesSupportClasses ? ES6ProxyComponentFactory : ES5ProxyComponentFactory;
+
+function getOwnKeys(target) {
+  return [].concat(Object.getOwnPropertyNames(target), Object.getOwnPropertySymbols(target));
+}
+
+function shallowStringsEqual(a, b) {
+  for (var key in a) {
+    if (String(a[key]) !== String(b[key])) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function deepPrototypeUpdate(dest, source) {
+  var deepDest = Object.getPrototypeOf(dest);
+  var deepSrc = Object.getPrototypeOf(source);
+  if (deepDest && deepSrc && deepSrc !== deepDest) {
+    deepPrototypeUpdate(deepDest, deepSrc);
+  }
+  if (source.prototype && source.prototype !== dest.prototype) {
+    dest.prototype = source.prototype;
+  }
+}
+
+function safeDefineProperty(target, key, props) {
+  try {
+    Object.defineProperty(target, key, props);
+  } catch (e) {
+    logger.warn('Error while wrapping', key, ' -> ', e);
+  }
+}
+
+var RESERVED_STATICS = ['length', 'displayName', 'name', 'arguments', 'caller', 'prototype', 'toString', 'valueOf', PROXY_KEY, UNWRAP_PROXY];
+
+function transferStaticProps(ProxyComponent, savedDescriptors, PreviousComponent, NextComponent) {
+  Object.getOwnPropertyNames(ProxyComponent).forEach(function (key) {
+    if (RESERVED_STATICS.indexOf(key) !== -1) {
+      return;
+    }
+
+    var prevDescriptor = Object.getOwnPropertyDescriptor(ProxyComponent, key);
+    var savedDescriptor = savedDescriptors[key];
+
+    if (!shallowEqual(prevDescriptor, savedDescriptor)) {
+      safeDefineProperty(NextComponent, key, prevDescriptor);
+    }
+  });
+
+  // Copy newly defined static methods and properties
+  Object.getOwnPropertyNames(NextComponent).forEach(function (key) {
+    if (RESERVED_STATICS.indexOf(key) !== -1) {
+      return;
+    }
+
+    var prevDescriptor = PreviousComponent && Object.getOwnPropertyDescriptor(ProxyComponent, key);
+    var savedDescriptor = savedDescriptors[key];
+
+    // Skip redefined descriptors
+    if (prevDescriptor && savedDescriptor && !shallowEqual(savedDescriptor, prevDescriptor)) {
+      safeDefineProperty(NextComponent, key, prevDescriptor);
+      return;
+    }
+
+    if (prevDescriptor && !savedDescriptor) {
+      safeDefineProperty(ProxyComponent, key, prevDescriptor);
+      return;
+    }
+
+    var nextDescriptor = _extends({}, Object.getOwnPropertyDescriptor(NextComponent, key), {
+      configurable: true
+    });
+
+    savedDescriptors[key] = nextDescriptor;
+    safeDefineProperty(ProxyComponent, key, nextDescriptor);
+  });
+
+  // Remove static methods and properties that are no longer defined
+  Object.getOwnPropertyNames(ProxyComponent).forEach(function (key) {
+    if (RESERVED_STATICS.indexOf(key) !== -1) {
+      return;
+    }
+    // Skip statics that exist on the next class
+    if (NextComponent.hasOwnProperty(key)) {
+      return;
+    }
+    // Skip non-configurable statics
+    var proxyDescriptor = Object.getOwnPropertyDescriptor(ProxyComponent, key);
+    if (proxyDescriptor && !proxyDescriptor.configurable) {
+      return;
+    }
+
+    var prevDescriptor = PreviousComponent && Object.getOwnPropertyDescriptor(PreviousComponent, key);
+    var savedDescriptor = savedDescriptors[key];
+
+    // Skip redefined descriptors
+    if (prevDescriptor && savedDescriptor && !shallowEqual(savedDescriptor, prevDescriptor)) {
+      return;
+    }
+
+    safeDefineProperty(ProxyComponent, key, {
+      value: undefined
+    });
+  });
+
+  return savedDescriptors;
+}
+
+function mergeComponents(ProxyComponent, NextComponent, InitialComponent, lastInstance, injectedMembers) {
+  var injectedCode = {};
+  try {
+    var nextInstance = safeReactConstructor(NextComponent, lastInstance);
+
+    try {
+      // Bypass babel class inheritance checking
+      deepPrototypeUpdate(InitialComponent, NextComponent);
+    } catch (e) {
+      // It was ES6 class
+    }
+
+    var proxyInstance = safeReactConstructor(ProxyComponent, lastInstance);
+
+    if (!nextInstance || !proxyInstance) {
+      return injectedCode;
+    }
+
+    var mergedAttrs = _extends({}, proxyInstance, nextInstance);
+    var hasRegenerate = proxyInstance[REGENERATE_METHOD];
+    var ownKeys = getOwnKeys(Object.getPrototypeOf(ProxyComponent.prototype));
+    Object.keys(mergedAttrs).forEach(function (key) {
+      if (key.startsWith(PREFIX)) return;
+      var nextAttr = nextInstance[key];
+      var prevAttr = proxyInstance[key];
+      if (prevAttr && nextAttr) {
+        if (isNativeFunction(nextAttr) || isNativeFunction(prevAttr)) {
+          // this is bound method
+          var isSameArity = nextAttr.length === prevAttr.length;
+          var existsInPrototype = ownKeys.indexOf(key) >= 0 || ProxyComponent.prototype[key];
+          if (isSameArity && existsInPrototype) {
+            if (hasRegenerate) {
+              injectedCode[key] = 'Object.getPrototypeOf(this)[\'' + key + '\'].bind(this)';
+            } else {
+              logger.warn('React Hot Loader:,', 'Non-controlled class', ProxyComponent.name, 'contains a new native or bound function ', key, nextAttr, '. Unable to reproduce');
+            }
+          } else {
+            logger.warn('React Hot Loader:', 'Updated class ', ProxyComponent.name, 'contains native or bound function ', key, nextAttr, '. Unable to reproduce, use arrow functions instead.', '(arity: ' + nextAttr.length + '/' + prevAttr.length + ', proto: ' + (existsInPrototype ? 'yes' : 'no'));
+          }
+          return;
+        }
+
+        var nextString = String(nextAttr);
+        var injectedBefore = injectedMembers[key];
+        if (nextString !== String(prevAttr) || injectedBefore && nextString !== String(injectedBefore)) {
+          if (!hasRegenerate) {
+            if (nextString.indexOf('function') < 0 && nextString.indexOf('=>') < 0) {
+              // just copy prop over
+              injectedCode[key] = nextAttr;
+            } else {
+              logger.warn('React Hot Loader:', ' Updated class ', ProxyComponent.name, 'had different code for', key, nextAttr, '. Unable to reproduce. Regeneration support needed.');
+            }
+          } else {
+            injectedCode[key] = nextAttr;
+          }
+        }
+      }
+    });
+  } catch (e) {
+    logger.warn('React Hot Loader:', e);
+  }
+  return injectedCode;
+}
+
+function checkLifeCycleMethods(ProxyComponent, NextComponent) {
+  try {
+    var p1 = Object.getPrototypeOf(ProxyComponent.prototype);
+    var p2 = NextComponent.prototype;
+    reactLifeCycleMountMethods.forEach(function (key) {
+      var d1 = Object.getOwnPropertyDescriptor(p1, key) || { value: p1[key] };
+      var d2 = Object.getOwnPropertyDescriptor(p2, key) || { value: p2[key] };
+      if (!shallowStringsEqual(d1, d2)) {
+        logger.warn('React Hot Loader:', 'You did update', ProxyComponent.name, 's lifecycle method', key, '. Unable to repeat');
+      }
+    });
+  } catch (e) {
+    // Ignore errors
+  }
+}
+
+function inject(target, currentGeneration, injectedMembers) {
+  if (target[GENERATION] !== currentGeneration) {
+    var hasRegenerate = !!target[REGENERATE_METHOD];
+    Object.keys(injectedMembers).forEach(function (key) {
+      try {
+        if (hasRegenerate) {
+          target[REGENERATE_METHOD](key, '(function REACT_HOT_LOADER_SANDBOX () {\n          var _this = this; // common babel transpile\n          var _this2 = this; // common babel transpile\n          return ' + injectedMembers[key] + ';\n          }).call(this)');
+        } else {
+          target[key] = injectedMembers[key];
+        }
+      } catch (e) {
+        logger.warn('React Hot Loader: Failed to regenerate method ', key, ' of class ', target);
+        logger.warn('got error', e);
+      }
+    });
+
+    target[GENERATION] = currentGeneration;
+  }
+}
+
+var has = Object.prototype.hasOwnProperty;
+
+var proxies = new WeakMap();
+
+var blackListedClassMembers = ['constructor', 'render', 'componentDidMount', 'componentWillReceiveProps', 'componentWillUnmount', 'getInitialState', 'getDefaultProps'];
+
+var defaultRenderOptions = {
+  componentWillReceiveProps: identity,
+  componentWillRender: identity,
+  componentDidRender: function componentDidRender(result) {
+    return result;
+  }
+};
+
+var defineClassMember = function defineClassMember(Class, methodName, methodBody) {
+  return safeDefineProperty(Class.prototype, methodName, {
+    configurable: true,
+    writable: true,
+    enumerable: false,
+    value: methodBody
+  });
+};
+
+var defineClassMembers = function defineClassMembers(Class, methods) {
+  return Object.keys(methods).forEach(function (methodName) {
+    return defineClassMember(Class, methodName, methods[methodName]);
+  });
+};
+
+function createClassProxy(InitialComponent, proxyKey, options) {
+  var renderOptions = _extends({}, defaultRenderOptions, options);
+  // Prevent double wrapping.
+  // Given a proxy class, return the existing proxy managing it.
+  var existingProxy = proxies.get(InitialComponent);
+
+  if (existingProxy) {
+    return existingProxy;
+  }
+
+  var CurrentComponent = void 0;
+  var savedDescriptors = {};
+  var injectedMembers = {};
+  var proxyGeneration = 0;
+  var isFunctionalComponent = !isReactClass(InitialComponent);
+
+  var lastInstance = null;
+
+  function postConstructionAction() {
+    this[GENERATION] = 0;
+
+    // As long we can't override constructor
+    // every class shall evolve from a base class
+    inject(this, proxyGeneration, injectedMembers);
+
+    lastInstance = this;
+  }
+
+  function proxiedUpdate() {
+    if (this) {
+      inject(this, proxyGeneration, injectedMembers);
+    }
+  }
+
+  function lifeCycleWrapperFactory(wrapperName) {
+    var sideEffect = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : identity;
+
+    return function wrappedMethod() {
+      proxiedUpdate.call(this);
+      sideEffect(this);
+
+      for (var _len = arguments.length, rest = Array(_len), _key = 0; _key < _len; _key++) {
+        rest[_key] = arguments[_key];
+      }
+
+      return !isFunctionalComponent && CurrentComponent.prototype[wrapperName] && CurrentComponent.prototype[wrapperName].apply(this, rest);
+    };
+  }
+
+  function methodWrapperFactory(wrapperName, realMethod) {
+    return function wrappedMethod() {
+      for (var _len2 = arguments.length, rest = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        rest[_key2] = arguments[_key2];
+      }
+
+      return realMethod.apply(this, rest);
+    };
+  }
+
+  var fakeBasePrototype = function fakeBasePrototype(Base) {
+    return Object.getOwnPropertyNames(Base).filter(function (key) {
+      return blackListedClassMembers.indexOf(key) === -1;
+    }).filter(function (key) {
+      var descriptor = Object.getOwnPropertyDescriptor(Base, key);
+      return typeof descriptor.value === 'function';
+    }).reduce(function (acc, key) {
+      acc[key] = methodWrapperFactory(key, Base[key]);
+      return acc;
+    }, {});
+  };
+
+  var componentDidMount = lifeCycleWrapperFactory('componentDidMount', function (target) {
+    target[PROXY_IS_MOUNTED] = true;
+  });
+  var componentWillReceiveProps = lifeCycleWrapperFactory('componentWillReceiveProps', renderOptions.componentWillReceiveProps);
+  var componentWillUnmount = lifeCycleWrapperFactory('componentWillUnmount', function (target) {
+    target[PROXY_IS_MOUNTED] = false;
+  });
+
+  function proxiedRender() {
+    proxiedUpdate.call(this);
+    renderOptions.componentWillRender(this);
+
+    var result = void 0;
+
+    // We need to use hasOwnProperty here, as the cached result is a React node
+    // and can be null or some other falsy value.
+    if (has.call(this, CACHED_RESULT)) {
+      result = this[CACHED_RESULT];
+      delete this[CACHED_RESULT];
+    } else if (isFunctionalComponent) {
+      result = CurrentComponent(this.props, this.context);
+    } else {
+      result = CurrentComponent.prototype.render.call(this);
+    }
+
+    return renderOptions.componentDidRender(result);
+  }
+
+  var defineProxyMethods = function defineProxyMethods(Proxy) {
+    var Base = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    defineClassMembers(Proxy, _extends({}, fakeBasePrototype(Base), {
+      render: proxiedRender,
+      componentDidMount: componentDidMount,
+      componentWillReceiveProps: componentWillReceiveProps,
+      componentWillUnmount: componentWillUnmount
+    }));
+  };
+
+  var ProxyFacade = void 0;
+  var ProxyComponent = null;
+
+  if (!isFunctionalComponent) {
+    ProxyComponent = proxyClassCreator(InitialComponent, postConstructionAction);
+
+    defineProxyMethods(ProxyComponent, InitialComponent.prototype);
+
+    ProxyFacade = ProxyComponent;
+  } else {
+    // This function only gets called for the initial mount. The actual
+    // rendered component instance will be the return value.
+
+    // eslint-disable-next-line func-names
+    ProxyFacade = function ProxyFacade(props, context) {
+      var result = CurrentComponent(props, context);
+
+      // This is a Relay-style container constructor. We can't do the prototype-
+      // style wrapping for this as we do elsewhere, so just we just pass it
+      // through as-is.
+      if (isReactComponentInstance(result)) {
+        ProxyComponent = null;
+        return result;
+      }
+
+      // Otherwise, it's a normal functional component. Build the real proxy
+      // and use it going forward.
+      ProxyComponent = proxyClassCreator(React.Component, postConstructionAction);
+
+      defineProxyMethods(ProxyComponent);
+
+      var determinateResult = new ProxyComponent(props, context);
+
+      // Cache the initial render result so we don't call the component function
+      // a second time for the initial render.
+      determinateResult[CACHED_RESULT] = result;
+      return determinateResult;
+    };
+  }
+
+  function get() {
+    return ProxyFacade;
+  }
+
+  function getCurrent() {
+    return CurrentComponent;
+  }
+
+  safeDefineProperty(ProxyFacade, UNWRAP_PROXY, {
+    configurable: false,
+    writable: false,
+    enumerable: false,
+    value: getCurrent
+  });
+
+  safeDefineProperty(ProxyFacade, PROXY_KEY, {
+    configurable: false,
+    writable: false,
+    enumerable: false,
+    value: proxyKey
+  });
+
+  safeDefineProperty(ProxyFacade, 'toString', {
+    configurable: true,
+    writable: false,
+    enumerable: false,
+    value: function toString() {
+      return String(CurrentComponent);
+    }
+  });
+
+  function update(NextComponent) {
+    if (typeof NextComponent !== 'function') {
+      throw new Error('Expected a constructor.');
+    }
+
+    if (NextComponent === CurrentComponent) {
+      return;
+    }
+
+    // Prevent proxy cycles
+    var existingProxy = proxies.get(NextComponent);
+    if (existingProxy) {
+      update(existingProxy[UNWRAP_PROXY]());
+      return;
+    }
+
+    isFunctionalComponent = !isReactClass(NextComponent);
+    proxyGeneration++;
+
+    // Save the next constructor so we call it
+    var PreviousComponent = CurrentComponent;
+    CurrentComponent = NextComponent;
+
+    // Try to infer displayName
+    var displayName = getDisplayName(CurrentComponent);
+
+    safeDefineProperty(ProxyFacade, 'displayName', {
+      configurable: true,
+      writable: false,
+      enumerable: true,
+      value: displayName
+    });
+
+    if (ProxyComponent) {
+      safeDefineProperty(ProxyComponent, 'name', {
+        value: displayName
+      });
+    }
+
+    savedDescriptors = transferStaticProps(ProxyFacade, savedDescriptors, PreviousComponent, NextComponent);
+
+    if (isFunctionalComponent || !ProxyComponent) {
+      // nothing
+    } else {
+      checkLifeCycleMethods(ProxyComponent, NextComponent);
+      Object.setPrototypeOf(ProxyComponent.prototype, NextComponent.prototype);
+      defineProxyMethods(ProxyComponent, NextComponent.prototype);
+      if (proxyGeneration > 1) {
+        injectedMembers = mergeComponents(ProxyComponent, NextComponent, InitialComponent, lastInstance, injectedMembers);
+      }
+    }
+  }
+
+  update(InitialComponent);
+
+  var proxy = { get: get, update: update };
+  proxies.set(ProxyFacade, proxy);
+
+  safeDefineProperty(proxy, UNWRAP_PROXY, {
+    configurable: false,
+    writable: false,
+    enumerable: false,
+    value: getCurrent
+  });
+
+  return proxy;
+}
+
+var proxiesByID = void 0;
+var idsByType = void 0;
+
+var elementCount = 0;
+var renderOptions = {};
+
+var generateTypeId = function generateTypeId() {
+  return 'auto-' + elementCount++;
+};
+
+var getIdByType = function getIdByType(type) {
+  return idsByType.get(type);
+};
+
+var getProxyById = function getProxyById(id) {
+  return proxiesByID[id];
+};
+var getProxyByType = function getProxyByType(type) {
+  return getProxyById(getIdByType(type));
+};
+
+var setStandInOptions = function setStandInOptions(options) {
+  renderOptions = options;
+};
+
+var updateProxyById = function updateProxyById(id, type) {
+  // Remember the ID.
+  idsByType.set(type, id);
+
+  if (!proxiesByID[id]) {
+    proxiesByID[id] = createClassProxy(type, id, renderOptions);
+  } else {
+    proxiesByID[id].update(type);
+  }
+  return proxiesByID[id];
+};
+
+var createProxyForType = function createProxyForType(type) {
+  return getProxyByType(type) || updateProxyById(generateTypeId(), type);
+};
+
+var resetProxies = function resetProxies() {
+  proxiesByID = {};
+  idsByType = new WeakMap();
+};
+
+resetProxies();
+
+/* eslint-disable no-use-before-define */
+
+function resolveType(type) {
+  if (!isCompositeComponent(type)) return type;
+
+  var proxy = reactHotLoader.disableProxyCreation ? getProxyByType(type) : createProxyForType(type);
+
+  return proxy ? proxy.get() : type;
+}
+
+var reactHotLoader = {
+  register: function register(type, uniqueLocalName, fileName) {
+    if (isCompositeComponent(type) && typeof uniqueLocalName === 'string' && uniqueLocalName && typeof fileName === 'string' && fileName) {
+      var id = fileName + '#' + uniqueLocalName;
+
+      if (getProxyById(id)) {
+        // component got replaced. Need to reconsile
+        increment();
+      }
+
+      updateProxyById(id, type);
+    }
+  },
+  reset: function reset() {
+    resetProxies();
+  },
+  patch: function patch(React$$1) {
+    if (!React$$1.createElement.isPatchedByReactHotLoader) {
+      var originalCreateElement = React$$1.createElement;
+      // Trick React into rendering a proxy so that
+      // its state is preserved when the class changes.
+      // This will update the proxy if it's for a known type.
+      React$$1.createElement = function (type) {
+        for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+          args[_key - 1] = arguments[_key];
+        }
+
+        return originalCreateElement.apply(undefined, [resolveType(type)].concat(args));
+      };
+      React$$1.createElement.isPatchedByReactHotLoader = true;
+    }
+
+    if (!React$$1.createFactory.isPatchedByReactHotLoader) {
+      // Patch React.createFactory to use patched createElement
+      // because the original implementation uses the internal,
+      // unpatched ReactElement.createElement
+      React$$1.createFactory = function (type) {
+        var factory = React$$1.createElement.bind(null, type);
+        factory.type = type;
+        return factory;
+      };
+      React$$1.createFactory.isPatchedByReactHotLoader = true;
+    }
+
+    if (!React$$1.Children.only.isPatchedByReactHotLoader) {
+      var originalChildrenOnly = React$$1.Children.only;
+      // Use the same trick as React.createElement
+      React$$1.Children.only = function (children) {
+        return originalChildrenOnly(_extends({}, children, { type: resolveType(children.type) }));
+      };
+      React$$1.Children.only.isPatchedByReactHotLoader = true;
+    }
+
+    reactHotLoader.reset();
+  },
+
+  disableProxyCreation: false
+};
+
+/* eslint-disable no-underscore-dangle */
+
+function pushStack(stack, node) {
+  stack.type = node.type;
+  stack.children = [];
+  stack.instance = typeof node.type === 'function' ? node.stateNode : stack;
+}
+
+function hydrateFiberStack(node, stack) {
+  pushStack(stack, node);
+  if (node.child) {
+    var child = node.child;
+
+    do {
+      var childStack = {};
+      hydrateFiberStack(child, childStack);
+      stack.children.push(childStack);
+      child = child.sibling;
+    } while (child);
+  }
+}
+
+/* eslint-disable no-underscore-dangle */
+
+function pushState(stack, type, instance) {
+  stack.type = type;
+  stack.children = [];
+  stack.instance = instance || stack;
+}
+
+function hydrateLegacyStack(node, stack) {
+  if (node._currentElement) {
+    pushState(stack, node._currentElement.type, node._instance || stack);
+  }
+
+  if (node._renderedComponent) {
+    var childStack = {};
+    hydrateLegacyStack(node._renderedComponent, childStack);
+    stack.children.push(childStack);
+  } else if (node._renderedChildren) {
+    Object.keys(node._renderedChildren).forEach(function (key) {
+      var childStack = {};
+      hydrateLegacyStack(node._renderedChildren[key], childStack);
+      stack.children.push(childStack);
+    });
+  }
+}
+
+/* eslint-disable no-underscore-dangle */
+
+function getReactStack(instance) {
+  var rootNode = getInternalInstance(instance);
+  var stack = {};
+  var isFiber = typeof rootNode.tag === 'number';
+  if (isFiber) {
+    hydrateFiberStack(rootNode, stack);
+  } else {
+    hydrateLegacyStack(rootNode, stack);
+  }
+  return stack;
+}
+
+// some `empty` names, React can autoset display name to...
+var UNDEFINED_NAMES = {
+  Unknown: true,
+  Component: true
+};
+
+var areNamesEqual = function areNamesEqual(a, b) {
+  return a === b || UNDEFINED_NAMES[a] && UNDEFINED_NAMES[b];
+};
+var isReactClass$1 = function isReactClass(fn) {
+  return fn && !!fn.render;
+};
+var isFunctional = function isFunctional(fn) {
+  return typeof fn === 'function';
+};
+var isArray = function isArray(fn) {
+  return Array.isArray(fn);
+};
+var asArray = function asArray(a) {
+  return isArray(a) ? a : [a];
+};
+var getTypeOf = function getTypeOf(type) {
+  if (isReactClass$1(type)) return 'ReactComponent';
+  if (isFunctional(type)) return 'StatelessFunctional';
+  return 'Fragment'; // ?
+};
+
+var filterNullArray = function filterNullArray(a) {
+  if (!a) return [];
+  return a.filter(function (x) {
+    return !!x;
+  });
+};
+
+var unflatten = function unflatten(a) {
+  return a.reduce(function (acc, a) {
+    if (Array.isArray(a)) {
+      acc.push.apply(acc, unflatten(a));
+    } else {
+      acc.push(a);
+    }
+    return acc;
+  }, []);
+};
+
+var getElementType = function getElementType(child) {
+  return child.type[UNWRAP_PROXY] ? child.type[UNWRAP_PROXY]() : child.type;
+};
+
+var haveTextSimilarity = function haveTextSimilarity(a, b) {
+  return (
+    // equal or slight changed
+    a === b || levenshtein.get(a, b) < a.length * 0.2
+  );
+};
+
+var equalClasses = function equalClasses(a, b) {
+  var prototypeA = a.prototype;
+  var prototypeB = Object.getPrototypeOf(b.prototype);
+
+  var hits = 0;
+  var misses = 0;
+  Object.getOwnPropertyNames(prototypeA).forEach(function (key) {
+    if (typeof prototypeA[key] === 'function') {
+      if (haveTextSimilarity(String(prototypeA[key]), String(prototypeB[key]))) {
+        hits++;
+      } else {
+        misses++;
+        if (key === 'render') {
+          misses++;
+        }
+      }
+    }
+  });
+  // allow to add or remove one function
+  return hits > 0 && misses <= 1;
+};
+
+var isSwappable = function isSwappable(a, b) {
+  // both are registered components
+  if (getIdByType(b) && getIdByType(a) === getIdByType(b)) {
+    return true;
+  }
+  if (getTypeOf(a) !== getTypeOf(b)) {
+    return false;
+  }
+  if (isReactClass$1(a.prototype)) {
+    return areNamesEqual(getComponentDisplayName(a), getComponentDisplayName(b)) && equalClasses(a, b);
+  }
+  if (isFunctional(a)) {
+    return areNamesEqual(getComponentDisplayName(a), getComponentDisplayName(b)) && haveTextSimilarity(String(a), String(b));
+  }
+  return false;
+};
+
+var render = function render(component) {
+  if (!component) {
+    return [];
+  }
+  if (isReactClass$1(component)) {
+    return component.render();
+  }
+  if (isArray(component)) {
+    return component.map(render);
+  }
+  if (component.children) {
+    return component.children;
+  }
+
+  return [];
+};
+
+var NO_CHILDREN = { children: [] };
+var mapChildren = function mapChildren(children, instances) {
+  return {
+    children: children.filter(function (c) {
+      return c;
+    }).map(function (child, index) {
+      if ((typeof child === 'undefined' ? 'undefined' : _typeof(child)) !== 'object') {
+        return child;
+      }
+      var instanceLine = instances[index] || {};
+      var oldChildren = asArray(instanceLine.children || []);
+
+      if (Array.isArray(child)) {
+        return _extends({
+          type: null
+        }, mapChildren(child, oldChildren));
+      }
+
+      var newChildren = asArray(child.props && child.props.children || child.children || []);
+      var nextChildren = oldChildren.length && mapChildren(newChildren, oldChildren);
+
+      return _extends({}, instanceLine, nextChildren || {}, {
+        type: child.type
+      });
+    })
+  };
+};
+
+var mergeInject = function mergeInject(a, b, instance) {
+  if (a && !Array.isArray(a)) {
+    return mergeInject([a], b);
+  }
+  if (b && !Array.isArray(b)) {
+    return mergeInject(a, [b]);
+  }
+
+  if (!a || !b) {
+    return NO_CHILDREN;
+  }
+  if (a.length === b.length) {
+    return mapChildren(a, b);
+  }
+
+  // in some cases (no confidence here) B could contain A except null children
+  // in some cases - could not.
+  // this depends on React version and the way you build component.
+
+  var nonNullA = filterNullArray(a);
+  if (nonNullA.length === b.length) {
+    return mapChildren(nonNullA, b);
+  }
+
+  var flatA = unflatten(nonNullA);
+  var flatB = unflatten(b);
+  if (flatA.length === flatB.length) {
+    return mapChildren(flatA, flatB);
+  }
+  if (flatB.length === 0 && flatA.length === 1 && _typeof(flatA[0]) !== 'object') {
+    // terminal node
+  } else {
+    logger.warn('React-hot-loader: unable to merge ', a, 'and children of ', instance);
+  }
+  return NO_CHILDREN;
+};
+
+var transformFlowNode = function transformFlowNode(flow) {
+  return flow.reduce(function (acc, node) {
+    if (isFragmentNode(node) && node.props && node.props.children) {
+      return [].concat(acc, node.props.children);
+    }
+    return [].concat(acc, [node]);
+  }, []);
+};
+
+var scheduledUpdates = [];
+var scheduledUpdate = 0;
+
+var flushScheduledUpdates = function flushScheduledUpdates() {
+  var instances = scheduledUpdates;
+  scheduledUpdates = [];
+  scheduledUpdate = 0;
+  instances.forEach(function (instance) {
+    return instance[PROXY_IS_MOUNTED] && updateInstance(instance);
+  });
+};
+
+var scheduleInstanceUpdate = function scheduleInstanceUpdate(instance) {
+  scheduledUpdates.push(instance);
+  if (!scheduledUpdate) {
+    scheduledUpdate = setTimeout(flushScheduledUpdates);
+  }
+};
+
+var hotReplacementRender = function hotReplacementRender(instance, stack) {
+  var flow = transformFlowNode(filterNullArray(asArray(render(instance))));
+
+  var children = stack.children;
+
+  flow.forEach(function (child, index) {
+    var stackChild = children[index];
+    var next = function next(instance) {
+      // copy over props as long new component may be hidden inside them
+      // child does not have all props, as long some of them can be calculated on componentMount.
+      var nextProps = _extends({}, instance.props);
+      for (var key in child.props) {
+        if (child.props[key]) {
+          nextProps[key] = child.props[key];
+        }
+      }
+      if (isReactClass$1(instance) && instance.componentWillUpdate) {
+        // Force-refresh component (bypass redux renderedComponent)
+        instance.componentWillUpdate(nextProps, instance.state);
+      }
+      instance.props = nextProps;
+      hotReplacementRender(instance, stackChild);
+    };
+
+    // text node
+    if ((typeof child === 'undefined' ? 'undefined' : _typeof(child)) !== 'object' || !stackChild || !stackChild.instance) {
+      return;
+    }
+
+    if (_typeof(child.type) !== _typeof(stackChild.type)) {
+      // Portals could generate undefined !== null
+      if (child.type && stackChild.type) {
+        logger.warn('React-hot-loader: got ', child.type, 'instead of', stackChild.type);
+      }
+      return;
+    }
+
+    if (typeof child.type !== 'function') {
+      next(
+      // move types from render to the instances of hydrated tree
+      mergeInject(asArray(child.props ? child.props.children : child.children), stackChild.instance.children, stackChild.instance));
+    } else {
+      // unwrap proxy
+      var childType = getElementType(child);
+      if (!stackChild.type[PROXY_KEY]) {
+        /* eslint-disable no-console */
+        logger.error('React-hot-loader: fatal error caused by ', stackChild.type, ' - no instrumentation found. ', 'Please require react-hot-loader before React. More in troubleshooting.');
+        throw new Error('React-hot-loader: wrong configuration');
+      }
+
+      if (child.type === stackChild.type) {
+        next(stackChild.instance);
+      } else if (isSwappable(childType, stackChild.type)) {
+        // they are both registered, or have equal code/displayname/signature
+
+        // update proxy using internal PROXY_KEY
+        updateProxyById(stackChild.type[PROXY_KEY], childType);
+
+        next(stackChild.instance);
+      } else {
+        logger.warn('React-hot-loader: a ' + getComponentDisplayName(childType) + ' was found where a ' + getComponentDisplayName(stackChild) + ' was expected.\n          ' + childType);
+      }
+
+      scheduleInstanceUpdate(stackChild.instance);
+    }
+  });
+};
+
+var hotReplacementRender$1 = function hotReplacementRender$1(instance, stack) {
+  try {
+    // disable reconciler to prevent upcoming components from proxying.
+    reactHotLoader.disableProxyCreation = true;
+    hotReplacementRender(instance, stack);
+  } catch (e) {
+    logger.warn('React-hot-loader: reconcilation failed due to error', e);
+  } finally {
+    reactHotLoader.disableProxyCreation = false;
+  }
+};
+
+var reconcileHotReplacement = function reconcileHotReplacement(ReactInstance) {
+  return hotReplacementRender$1(ReactInstance, getReactStack(ReactInstance));
+};
+
+var RENDERED_GENERATION = 'REACT_HOT_LOADER_RENDERED_GENERATION';
+
+var renderReconciler = function renderReconciler(target, force) {
+  // we are not inside parent reconcilation
+  var currentGeneration = get();
+  var componentGeneration = target[RENDERED_GENERATION];
+
+  target[RENDERED_GENERATION] = currentGeneration;
+
+  if (!reactHotLoader.disableProxyCreation) {
+    if ((componentGeneration || force) && componentGeneration !== currentGeneration) {
+      reconcileHotReplacement(target);
+      return true;
+    }
+  }
+  return false;
+};
+
+function asyncReconciledRender(target) {
+  renderReconciler(target, false);
+}
+
+function syncReconciledRender(target) {
+  if (renderReconciler(target, false)) {
+    flushScheduledUpdates();
+  }
+}
+
+var proxyWrapper = function proxyWrapper(element) {
+  // post wrap on post render
+  if (!element) {
+    return element;
+  }
+  if (Array.isArray(element)) {
+    return element.map(proxyWrapper);
+  }
+  if (typeof element.type === 'function') {
+    var proxy = getProxyByType(element.type);
+    if (proxy) {
+      return _extends({}, element, {
+        type: proxy.get()
+      });
+    }
+  }
+  return element;
+};
+
+setStandInOptions({
+  componentWillReceiveProps: syncReconciledRender,
+  componentWillRender: asyncReconciledRender,
+  componentDidRender: proxyWrapper
+});
+
+var AppContainer = function (_React$Component) {
+  inherits(AppContainer, _React$Component);
+
+  function AppContainer(props) {
+    classCallCheck(this, AppContainer);
+
+    var _this = possibleConstructorReturn(this, _React$Component.call(this, props));
+
+    _this.state = {
+      error: null,
+      generation: 0
+    };
+    return _this;
+  }
+
+  AppContainer.prototype.componentWillReceiveProps = function componentWillReceiveProps() {
+    if (this.state.generation !== get()) {
+      // Hot reload is happening.
+
+      this.setState({
+        error: null,
+        generation: get()
+      });
+
+      // perform sandboxed render to find similarities between new and old code
+      renderReconciler(this, true);
+      // it is possible to flush update out of render cycle
+      flushScheduledUpdates();
+    }
+  };
+
+  AppContainer.prototype.shouldComponentUpdate = function shouldComponentUpdate(prevProps, prevState) {
+    // Don't update the component if the state had an error and still has one.
+    // This allows to break an infinite loop of error -> render -> error -> render
+    // https://github.com/gaearon/react-hot-loader/issues/696
+    if (prevState.error && this.state.error) {
+      return false;
+    }
+
+    return true;
+  };
+
+  AppContainer.prototype.componentDidCatch = function componentDidCatch(error) {
+    logger.error(error);
+    this.setState({ error: error });
+  };
+
+  AppContainer.prototype.render = function render() {
+    var error = this.state.error;
+
+    if (this.props.errorReporter && error) {
+      return React__default.createElement(this.props.errorReporter, { error: error });
+    }
+
+    return React__default.Children.only(this.props.children);
+  };
+
+  return AppContainer;
+}(React__default.Component);
+
+AppContainer.propTypes = {
+  children: function children(props) {
+    if (React__default.Children.count(props.children) !== 1) {
+      return new Error('Invalid prop "children" supplied to AppContainer. ' + 'Expected a single React element with your app’s root component, e.g. <App />.');
+    }
+
+    return undefined;
+  },
+
+  errorReporter: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
+};
+
+var openedModules = {};
+
+var hotModules = {};
+
+var createHotModule = function createHotModule() {
+  return { instances: [], updateTimeout: 0 };
+};
+
+var hotModule = function hotModule(moduleId) {
+  if (!hotModules[moduleId]) {
+    hotModules[moduleId] = createHotModule();
+  }
+  return hotModules[moduleId];
+};
+
+var isOpened = function isOpened(sourceModule) {
+  return sourceModule && !!openedModules[sourceModule.id];
+};
+
+var enter = function enter(sourceModule) {
+  if (sourceModule && sourceModule.id) {
+    openedModules[sourceModule.id] = true;
+  } else {
+    logger.warn('React-hot-loader: no `module` variable found. Do you shadow system variable?');
+  }
+};
+
+var leave = function leave(sourceModule) {
+  if (sourceModule && sourceModule.id) {
+    delete openedModules[sourceModule.id];
+  }
+};
+
+/* eslint-disable camelcase, no-undef */
+var requireIndirect =  true ? __webpack_require__ : require;
+/* eslint-enable */
+
+var createHoc = function createHoc(SourceComponent, TargetComponent) {
+  hoistNonReactStatic(TargetComponent, SourceComponent);
+  TargetComponent.displayName = 'HotExported' + getComponentDisplayName(SourceComponent);
+  return TargetComponent;
+};
+
+var makeHotExport = function makeHotExport(sourceModule) {
+  var updateInstances = function updateInstances() {
+    var module = hotModule(sourceModule.id);
+    clearTimeout(module.updateTimeout);
+    module.updateTimeout = setTimeout(function () {
+      try {
+        requireIndirect(sourceModule.id);
+      } catch (e) {
+        // just swallow
+      }
+      module.instances.forEach(function (inst) {
+        return inst.forceUpdate();
+      });
+    });
+  };
+
+  if (sourceModule.hot) {
+    // Mark as self-accepted for Webpack
+    // Update instances for Parcel
+    sourceModule.hot.accept(updateInstances);
+
+    // Webpack way
+    if (sourceModule.hot.addStatusHandler) {
+      if (sourceModule.hot.status() === 'idle') {
+        sourceModule.hot.addStatusHandler(function (status) {
+          if (status === 'apply') {
+            updateInstances();
+          }
+        });
+      }
+    }
+  }
+};
+
+var hot = function hot(sourceModule) {
+  if (!sourceModule || !sourceModule.id) {
+    // this is fatal
+    throw new Error('React-hot-loader: `hot` could not found the `id` property in the `module` you have provided');
+  }
+  var moduleId = sourceModule.id;
+  var module = hotModule(moduleId);
+  makeHotExport(sourceModule);
+
+  // TODO: Ensure that all exports from this file are react components.
+
+  return function (WrappedComponent) {
+    // register proxy for wrapped component
+    reactHotLoader.register(WrappedComponent, getComponentDisplayName(WrappedComponent), 'RHL' + moduleId);
+
+    return createHoc(WrappedComponent, function (_Component) {
+      inherits(ExportedComponent, _Component);
+
+      function ExportedComponent() {
+        classCallCheck(this, ExportedComponent);
+        return possibleConstructorReturn(this, _Component.apply(this, arguments));
+      }
+
+      ExportedComponent.prototype.componentWillMount = function componentWillMount() {
+        module.instances.push(this);
+      };
+
+      ExportedComponent.prototype.componentWillUnmount = function componentWillUnmount() {
+        var _this2 = this;
+
+        if (isOpened(sourceModule)) {
+          var componentName = getComponentDisplayName(WrappedComponent);
+          logger.error('React-hot-loader: Detected AppContainer unmount on module \'' + moduleId + '\' update.\n' + ('Did you use "hot(' + componentName + ')" and "ReactDOM.render()" in the same file?\n') + ('"hot(' + componentName + ')" shall only be used as export.\n') + 'Please refer to "Getting Started" (https://github.com/gaearon/react-hot-loader/).');
+        }
+        module.instances = module.instances.filter(function (a) {
+          return a !== _this2;
+        });
+      };
+
+      ExportedComponent.prototype.render = function render() {
+        return React__default.createElement(AppContainer, null, React__default.createElement(WrappedComponent, this.props));
+      };
+
+      return ExportedComponent;
+    }(React.Component));
+  };
+};
+
+var getProxyOrType = function getProxyOrType(type) {
+  var proxy = getProxyByType(type);
+  return proxy ? proxy.get() : type;
+};
+
+var areComponentsEqual = function areComponentsEqual(a, b) {
+  return getProxyOrType(a) === getProxyOrType(b);
+};
+
+var setConfig = function setConfig(config) {
+  return Object.assign(configuration, config);
+};
+
+reactHotLoader.patch(React__default);
+
+exports.default = reactHotLoader;
+exports.AppContainer = AppContainer;
+exports.hot = hot;
+exports.enterModule = enter;
+exports.leaveModule = leave;
+exports.areComponentsEqual = areComponentsEqual;
+exports.setConfig = setConfig;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(_interopDefault, '_interopDefault', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(React__default, 'React__default', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(shallowEqual, 'shallowEqual', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(levenshtein, 'levenshtein', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(PropTypes, 'PropTypes', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(hoistNonReactStatic, 'hoistNonReactStatic', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(isCompositeComponent, 'isCompositeComponent', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(getComponentDisplayName, 'getComponentDisplayName', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(getInternalInstance, 'getInternalInstance', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(updateInstance, 'updateInstance', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(isFragmentNode, 'isFragmentNode', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(generation, 'generation', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(increment, 'increment', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(get, 'get', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(PREFIX, 'PREFIX', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(PROXY_KEY, 'PROXY_KEY', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(GENERATION, 'GENERATION', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(REGENERATE_METHOD, 'REGENERATE_METHOD', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(UNWRAP_PROXY, 'UNWRAP_PROXY', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(CACHED_RESULT, 'CACHED_RESULT', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(PROXY_IS_MOUNTED, 'PROXY_IS_MOUNTED', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(configuration, 'configuration', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(logger, 'logger', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(_typeof, '_typeof', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(classCallCheck, 'classCallCheck', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(_extends, '_extends', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(inherits, 'inherits', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(possibleConstructorReturn, 'possibleConstructorReturn', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(getDisplayName, 'getDisplayName', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(reactLifeCycleMountMethods, 'reactLifeCycleMountMethods', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(isReactClass, 'isReactClass', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(safeReactConstructor, 'safeReactConstructor', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(isNativeFunction, 'isNativeFunction', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(identity, 'identity', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(indirectEval, 'indirectEval', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(doesSupportClasses, 'doesSupportClasses', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(ES6ProxyComponentFactory, 'ES6ProxyComponentFactory', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(ES5ProxyComponentFactory, 'ES5ProxyComponentFactory', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(isReactComponentInstance, 'isReactComponentInstance', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(proxyClassCreator, 'proxyClassCreator', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(getOwnKeys, 'getOwnKeys', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(shallowStringsEqual, 'shallowStringsEqual', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(deepPrototypeUpdate, 'deepPrototypeUpdate', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(safeDefineProperty, 'safeDefineProperty', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(RESERVED_STATICS, 'RESERVED_STATICS', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(transferStaticProps, 'transferStaticProps', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(mergeComponents, 'mergeComponents', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(checkLifeCycleMethods, 'checkLifeCycleMethods', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(inject, 'inject', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(has, 'has', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(proxies, 'proxies', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(blackListedClassMembers, 'blackListedClassMembers', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(defaultRenderOptions, 'defaultRenderOptions', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(defineClassMember, 'defineClassMember', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(defineClassMembers, 'defineClassMembers', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(createClassProxy, 'createClassProxy', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(proxiesByID, 'proxiesByID', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(idsByType, 'idsByType', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(elementCount, 'elementCount', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(renderOptions, 'renderOptions', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(generateTypeId, 'generateTypeId', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(getIdByType, 'getIdByType', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(getProxyById, 'getProxyById', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(getProxyByType, 'getProxyByType', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(setStandInOptions, 'setStandInOptions', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(updateProxyById, 'updateProxyById', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(createProxyForType, 'createProxyForType', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(resetProxies, 'resetProxies', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(resolveType, 'resolveType', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(reactHotLoader, 'reactHotLoader', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(pushStack, 'pushStack', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(hydrateFiberStack, 'hydrateFiberStack', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(pushState, 'pushState', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(hydrateLegacyStack, 'hydrateLegacyStack', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(getReactStack, 'getReactStack', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(UNDEFINED_NAMES, 'UNDEFINED_NAMES', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(areNamesEqual, 'areNamesEqual', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(isReactClass$1, 'isReactClass$1', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(isFunctional, 'isFunctional', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(isArray, 'isArray', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(asArray, 'asArray', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(getTypeOf, 'getTypeOf', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(filterNullArray, 'filterNullArray', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(unflatten, 'unflatten', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(getElementType, 'getElementType', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(haveTextSimilarity, 'haveTextSimilarity', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(equalClasses, 'equalClasses', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(isSwappable, 'isSwappable', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(render, 'render', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(NO_CHILDREN, 'NO_CHILDREN', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(mapChildren, 'mapChildren', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(mergeInject, 'mergeInject', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(transformFlowNode, 'transformFlowNode', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(scheduledUpdates, 'scheduledUpdates', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(scheduledUpdate, 'scheduledUpdate', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(flushScheduledUpdates, 'flushScheduledUpdates', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(scheduleInstanceUpdate, 'scheduleInstanceUpdate', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(hotReplacementRender, 'hotReplacementRender', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(hotReplacementRender$1, 'hotReplacementRender$1', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(reconcileHotReplacement, 'reconcileHotReplacement', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(RENDERED_GENERATION, 'RENDERED_GENERATION', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(renderReconciler, 'renderReconciler', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(asyncReconciledRender, 'asyncReconciledRender', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(syncReconciledRender, 'syncReconciledRender', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(proxyWrapper, 'proxyWrapper', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(AppContainer, 'AppContainer', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(openedModules, 'openedModules', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(hotModules, 'hotModules', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(createHotModule, 'createHotModule', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(hotModule, 'hotModule', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(isOpened, 'isOpened', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(enter, 'enter', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(leave, 'leave', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(requireIndirect, 'requireIndirect', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(createHoc, 'createHoc', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(makeHotExport, 'makeHotExport', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(hot, 'hot', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(getProxyOrType, 'getProxyOrType', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(areComponentsEqual, 'areComponentsEqual', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  reactHotLoader.register(setConfig, 'setConfig', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-hot-loader/dist/react-hot-loader.development.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+module.exports = function shallowEqual(objA, objB, compare, compareContext) {
+
+    var ret = compare ? compare.call(compareContext, objA, objB) : void 0;
+
+    if (ret !== void 0) {
+        return !!ret;
+    }
+
+    if (objA === objB) {
+        return true;
+    }
+
+    if ((typeof objA === 'undefined' ? 'undefined' : _typeof(objA)) !== 'object' || !objA || (typeof objB === 'undefined' ? 'undefined' : _typeof(objB)) !== 'object' || !objB) {
+        return false;
+    }
+
+    var keysA = Object.keys(objA);
+    var keysB = Object.keys(objB);
+
+    if (keysA.length !== keysB.length) {
+        return false;
+    }
+
+    var bHasOwnProperty = Object.prototype.hasOwnProperty.bind(objB);
+
+    // Test for A's keys different from B.
+    for (var idx = 0; idx < keysA.length; idx++) {
+
+        var key = keysA[idx];
+
+        if (!bHasOwnProperty(key)) {
+            return false;
+        }
+
+        var valueA = objA[key];
+        var valueB = objB[key];
+
+        ret = compare ? compare.call(compareContext, valueA, valueB, key) : void 0;
+
+        if (ret === false || ret === void 0 && valueA !== valueB) {
+            return false;
+        }
+    }
+
+    return true;
+};
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;
+
+(function () {
+  'use strict';
+
+  var collator;
+  try {
+    collator = typeof Intl !== "undefined" && typeof Intl.Collator !== "undefined" ? Intl.Collator("generic", { sensitivity: "base" }) : null;
+  } catch (err) {
+    console.log("Collator could not be initialized and wouldn't be used");
+  }
+  // arrays to re-use
+  var prevRow = [],
+      str2Char = [];
+
+  /**
+   * Based on the algorithm at http://en.wikipedia.org/wiki/Levenshtein_distance.
+   */
+  var Levenshtein = {
+    /**
+     * Calculate levenshtein distance of the two strings.
+     *
+     * @param str1 String the first string.
+     * @param str2 String the second string.
+     * @param [options] Additional options.
+     * @param [options.useCollator] Use `Intl.Collator` for locale-sensitive string comparison.
+     * @return Integer the levenshtein distance (0 and above).
+     */
+    get: function get(str1, str2, options) {
+      var useCollator = options && collator && options.useCollator;
+
+      var str1Len = str1.length,
+          str2Len = str2.length;
+
+      // base cases
+      if (str1Len === 0) return str2Len;
+      if (str2Len === 0) return str1Len;
+
+      // two rows
+      var curCol, nextCol, i, j, tmp;
+
+      // initialise previous row
+      for (i = 0; i < str2Len; ++i) {
+        prevRow[i] = i;
+        str2Char[i] = str2.charCodeAt(i);
+      }
+      prevRow[str2Len] = str2Len;
+
+      var strCmp;
+      if (useCollator) {
+        // calculate current row distance from previous row using collator
+        for (i = 0; i < str1Len; ++i) {
+          nextCol = i + 1;
+
+          for (j = 0; j < str2Len; ++j) {
+            curCol = nextCol;
+
+            // substution
+            strCmp = 0 === collator.compare(str1.charAt(i), String.fromCharCode(str2Char[j]));
+
+            nextCol = prevRow[j] + (strCmp ? 0 : 1);
+
+            // insertion
+            tmp = curCol + 1;
+            if (nextCol > tmp) {
+              nextCol = tmp;
+            }
+            // deletion
+            tmp = prevRow[j + 1] + 1;
+            if (nextCol > tmp) {
+              nextCol = tmp;
+            }
+
+            // copy current col value into previous (in preparation for next iteration)
+            prevRow[j] = curCol;
+          }
+
+          // copy last col value into previous (in preparation for next iteration)
+          prevRow[j] = nextCol;
+        }
+      } else {
+        // calculate current row distance from previous row without collator
+        for (i = 0; i < str1Len; ++i) {
+          nextCol = i + 1;
+
+          for (j = 0; j < str2Len; ++j) {
+            curCol = nextCol;
+
+            // substution
+            strCmp = str1.charCodeAt(i) === str2Char[j];
+
+            nextCol = prevRow[j] + (strCmp ? 0 : 1);
+
+            // insertion
+            tmp = curCol + 1;
+            if (nextCol > tmp) {
+              nextCol = tmp;
+            }
+            // deletion
+            tmp = prevRow[j + 1] + 1;
+            if (nextCol > tmp) {
+              nextCol = tmp;
+            }
+
+            // copy current col value into previous (in preparation for next iteration)
+            prevRow[j] = curCol;
+          }
+
+          // copy last col value into previous (in preparation for next iteration)
+          prevRow[j] = nextCol;
+        }
+      }
+      return nextCol;
+    }
+
+  };
+
+  // amd
+  if ("function" !== "undefined" && __webpack_require__(28) !== null && __webpack_require__(29)) {
+    !(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+      return Levenshtein;
+    }).call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  }
+  // commonjs
+  else if (typeof module !== "undefined" && module !== null && typeof exports !== "undefined" && module.exports === exports) {
+      module.exports = Levenshtein;
+    }
+    // web worker
+    else if (typeof self !== "undefined" && typeof self.postMessage === 'function' && typeof self.importScripts === 'function') {
+        self.Levenshtein = Levenshtein;
+      }
+      // browser main thread
+      else if (typeof window !== "undefined" && window !== null) {
+          window.Levenshtein = Levenshtein;
+        }
+})();
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports) {
+
+module.exports = function() {
+	throw new Error("define cannot be used indirect");
+};
+
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports) {
+
+/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
+module.exports = __webpack_amd_options__;
+
+/* WEBPACK VAR INJECTION */}.call(exports, {}))
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module, process) {
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (process.env.NODE_ENV !== 'production') {
+  var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol.for && Symbol.for('react.element') || 0xeac7;
+
+  var isValidElement = function isValidElement(object) {
+    return (typeof object === 'undefined' ? 'undefined' : _typeof(object)) === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+  };
+
+  // By explicitly using `prop-types` you are opting into new development behavior.
+  // http://fb.me/prop-types-in-prod
+  var throwOnDirectAccess = true;
+  module.exports = __webpack_require__(31)(isValidElement, throwOnDirectAccess);
+} else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(32)();
+}
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(REACT_ELEMENT_TYPE, 'REACT_ELEMENT_TYPE', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/prop-types/index.js');
+  reactHotLoader.register(isValidElement, 'isValidElement', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/prop-types/index.js');
+  reactHotLoader.register(throwOnDirectAccess, 'throwOnDirectAccess', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/prop-types/index.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module), __webpack_require__(2)))
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var emptyFunction = __webpack_require__(5);
+var invariant = __webpack_require__(4);
+var warning = __webpack_require__(8);
+var assign = __webpack_require__(6);
+
+var ReactPropTypesSecret = __webpack_require__(12);
+var checkPropTypes = __webpack_require__(11);
+
+module.exports = function (isValidElement, throwOnDirectAccess) {
+  /* global Symbol */
+  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
+  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
+
+  /**
+   * Returns the iterator method function contained on the iterable object.
+   *
+   * Be sure to invoke the function with the iterable as context:
+   *
+   *     var iteratorFn = getIteratorFn(myIterable);
+   *     if (iteratorFn) {
+   *       var iterator = iteratorFn.call(myIterable);
+   *       ...
+   *     }
+   *
+   * @param {?object} maybeIterable
+   * @return {?function}
+   */
+  function getIteratorFn(maybeIterable) {
+    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+    if (typeof iteratorFn === 'function') {
+      return iteratorFn;
+    }
+  }
+
+  /**
+   * Collection of methods that allow declaration and validation of props that are
+   * supplied to React components. Example usage:
+   *
+   *   var Props = require('ReactPropTypes');
+   *   var MyArticle = React.createClass({
+   *     propTypes: {
+   *       // An optional string prop named "description".
+   *       description: Props.string,
+   *
+   *       // A required enum prop named "category".
+   *       category: Props.oneOf(['News','Photos']).isRequired,
+   *
+   *       // A prop named "dialog" that requires an instance of Dialog.
+   *       dialog: Props.instanceOf(Dialog).isRequired
+   *     },
+   *     render: function() { ... }
+   *   });
+   *
+   * A more formal specification of how these methods are used:
+   *
+   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+   *   decl := ReactPropTypes.{type}(.isRequired)?
+   *
+   * Each and every declaration produces a function with the same signature. This
+   * allows the creation of custom validation functions. For example:
+   *
+   *  var MyLink = React.createClass({
+   *    propTypes: {
+   *      // An optional string or URI prop named "href".
+   *      href: function(props, propName, componentName) {
+   *        var propValue = props[propName];
+   *        if (propValue != null && typeof propValue !== 'string' &&
+   *            !(propValue instanceof URI)) {
+   *          return new Error(
+   *            'Expected a string or an URI for ' + propName + ' in ' +
+   *            componentName
+   *          );
+   *        }
+   *      }
+   *    },
+   *    render: function() {...}
+   *  });
+   *
+   * @internal
+   */
+
+  var ANONYMOUS = '<<anonymous>>';
+
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+  var ReactPropTypes = {
+    array: createPrimitiveTypeChecker('array'),
+    bool: createPrimitiveTypeChecker('boolean'),
+    func: createPrimitiveTypeChecker('function'),
+    number: createPrimitiveTypeChecker('number'),
+    object: createPrimitiveTypeChecker('object'),
+    string: createPrimitiveTypeChecker('string'),
+    symbol: createPrimitiveTypeChecker('symbol'),
+
+    any: createAnyTypeChecker(),
+    arrayOf: createArrayOfTypeChecker,
+    element: createElementTypeChecker(),
+    instanceOf: createInstanceTypeChecker,
+    node: createNodeChecker(),
+    objectOf: createObjectOfTypeChecker,
+    oneOf: createEnumTypeChecker,
+    oneOfType: createUnionTypeChecker,
+    shape: createShapeTypeChecker,
+    exact: createStrictShapeTypeChecker
+  };
+
+  /**
+   * inlined Object.is polyfill to avoid requiring consumers ship their own
+   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+   */
+  /*eslint-disable no-self-compare*/
+  function is(x, y) {
+    // SameValue algorithm
+    if (x === y) {
+      // Steps 1-5, 7-10
+      // Steps 6.b-6.e: +0 != -0
+      return x !== 0 || 1 / x === 1 / y;
+    } else {
+      // Step 6.a: NaN == NaN
+      return x !== x && y !== y;
+    }
+  }
+  /*eslint-enable no-self-compare*/
+
+  /**
+   * We use an Error-like object for backward compatibility as people may call
+   * PropTypes directly and inspect their output. However, we don't use real
+   * Errors anymore. We don't inspect their stack anyway, and creating them
+   * is prohibitively expensive if they are created too often, such as what
+   * happens in oneOfType() for any type before the one that matched.
+   */
+  function PropTypeError(message) {
+    this.message = message;
+    this.stack = '';
+  }
+  // Make `instanceof Error` still work for returned errors.
+  PropTypeError.prototype = Error.prototype;
+
+  function createChainableTypeChecker(validate) {
+    if (process.env.NODE_ENV !== 'production') {
+      var manualPropTypeCallCache = {};
+      var manualPropTypeWarningCount = 0;
+    }
+    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
+      componentName = componentName || ANONYMOUS;
+      propFullName = propFullName || propName;
+
+      if (secret !== ReactPropTypesSecret) {
+        if (throwOnDirectAccess) {
+          // New behavior only for users of `prop-types` package
+          invariant(false, 'Calling PropTypes validators directly is not supported by the `prop-types` package. ' + 'Use `PropTypes.checkPropTypes()` to call them. ' + 'Read more at http://fb.me/use-check-prop-types');
+        } else if (process.env.NODE_ENV !== 'production' && typeof console !== 'undefined') {
+          // Old behavior for people using React.PropTypes
+          var cacheKey = componentName + ':' + propName;
+          if (!manualPropTypeCallCache[cacheKey] &&
+          // Avoid spamming the console because they are often not actionable except for lib authors
+          manualPropTypeWarningCount < 3) {
+            warning(false, 'You are manually calling a React.PropTypes validation ' + 'function for the `%s` prop on `%s`. This is deprecated ' + 'and will throw in the standalone `prop-types` package. ' + 'You may be seeing this warning due to a third-party PropTypes ' + 'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.', propFullName, componentName);
+            manualPropTypeCallCache[cacheKey] = true;
+            manualPropTypeWarningCount++;
+          }
+        }
+      }
+      if (props[propName] == null) {
+        if (isRequired) {
+          if (props[propName] === null) {
+            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
+          }
+          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
+        }
+        return null;
+      } else {
+        return validate(props, propName, componentName, location, propFullName);
+      }
+    }
+
+    var chainedCheckType = checkType.bind(null, false);
+    chainedCheckType.isRequired = checkType.bind(null, true);
+
+    return chainedCheckType;
+  }
+
+  function createPrimitiveTypeChecker(expectedType) {
+    function validate(props, propName, componentName, location, propFullName, secret) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== expectedType) {
+        // `propValue` being instance of, say, date/regexp, pass the 'object'
+        // check, but we can offer a more precise error message here rather than
+        // 'of type `object`'.
+        var preciseType = getPreciseType(propValue);
+
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createAnyTypeChecker() {
+    return createChainableTypeChecker(emptyFunction.thatReturnsNull);
+  }
+
+  function createArrayOfTypeChecker(typeChecker) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (typeof typeChecker !== 'function') {
+        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
+      }
+      var propValue = props[propName];
+      if (!Array.isArray(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
+      }
+      for (var i = 0; i < propValue.length; i++) {
+        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
+        if (error instanceof Error) {
+          return error;
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createElementTypeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      if (!isValidElement(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createInstanceTypeChecker(expectedClass) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (!(props[propName] instanceof expectedClass)) {
+        var expectedClassName = expectedClass.name || ANONYMOUS;
+        var actualClassName = getClassName(props[propName]);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createEnumTypeChecker(expectedValues) {
+    if (!Array.isArray(expectedValues)) {
+      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
+      return emptyFunction.thatReturnsNull;
+    }
+
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      for (var i = 0; i < expectedValues.length; i++) {
+        if (is(propValue, expectedValues[i])) {
+          return null;
+        }
+      }
+
+      var valuesString = JSON.stringify(expectedValues);
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createObjectOfTypeChecker(typeChecker) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (typeof typeChecker !== 'function') {
+        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
+      }
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
+      }
+      for (var key in propValue) {
+        if (propValue.hasOwnProperty(key)) {
+          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+          if (error instanceof Error) {
+            return error;
+          }
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createUnionTypeChecker(arrayOfTypeCheckers) {
+    if (!Array.isArray(arrayOfTypeCheckers)) {
+      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
+      return emptyFunction.thatReturnsNull;
+    }
+
+    for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
+      var checker = arrayOfTypeCheckers[i];
+      if (typeof checker !== 'function') {
+        warning(false, 'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' + 'received %s at index %s.', getPostfixForTypeWarning(checker), i);
+        return emptyFunction.thatReturnsNull;
+      }
+    }
+
+    function validate(props, propName, componentName, location, propFullName) {
+      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
+        var checker = arrayOfTypeCheckers[i];
+        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+          return null;
+        }
+      }
+
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createNodeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (!isNode(props[propName])) {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createShapeTypeChecker(shapeTypes) {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+      }
+      for (var key in shapeTypes) {
+        var checker = shapeTypes[key];
+        if (!checker) {
+          continue;
+        }
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error) {
+          return error;
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createStrictShapeTypeChecker(shapeTypes) {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+      }
+      // We need to check all keys in case some are required but missing from
+      // props.
+      var allKeys = assign({}, props[propName], shapeTypes);
+      for (var key in allKeys) {
+        var checker = shapeTypes[key];
+        if (!checker) {
+          return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' + '\nBad object: ' + JSON.stringify(props[propName], null, '  ') + '\nValid keys: ' + JSON.stringify(Object.keys(shapeTypes), null, '  '));
+        }
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error) {
+          return error;
+        }
+      }
+      return null;
+    }
+
+    return createChainableTypeChecker(validate);
+  }
+
+  function isNode(propValue) {
+    switch (typeof propValue === 'undefined' ? 'undefined' : _typeof(propValue)) {
+      case 'number':
+      case 'string':
+      case 'undefined':
+        return true;
+      case 'boolean':
+        return !propValue;
+      case 'object':
+        if (Array.isArray(propValue)) {
+          return propValue.every(isNode);
+        }
+        if (propValue === null || isValidElement(propValue)) {
+          return true;
+        }
+
+        var iteratorFn = getIteratorFn(propValue);
+        if (iteratorFn) {
+          var iterator = iteratorFn.call(propValue);
+          var step;
+          if (iteratorFn !== propValue.entries) {
+            while (!(step = iterator.next()).done) {
+              if (!isNode(step.value)) {
+                return false;
+              }
+            }
+          } else {
+            // Iterator will provide entry [k,v] tuples rather than values.
+            while (!(step = iterator.next()).done) {
+              var entry = step.value;
+              if (entry) {
+                if (!isNode(entry[1])) {
+                  return false;
+                }
+              }
+            }
+          }
+        } else {
+          return false;
+        }
+
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  function isSymbol(propType, propValue) {
+    // Native Symbol.
+    if (propType === 'symbol') {
+      return true;
+    }
+
+    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
+    if (propValue['@@toStringTag'] === 'Symbol') {
+      return true;
+    }
+
+    // Fallback for non-spec compliant Symbols which are polyfilled.
+    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
+      return true;
+    }
+
+    return false;
+  }
+
+  // Equivalent of `typeof` but with special handling for array and regexp.
+  function getPropType(propValue) {
+    var propType = typeof propValue === 'undefined' ? 'undefined' : _typeof(propValue);
+    if (Array.isArray(propValue)) {
+      return 'array';
+    }
+    if (propValue instanceof RegExp) {
+      // Old webkits (at least until Android 4.0) return 'function' rather than
+      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
+      // passes PropTypes.object.
+      return 'object';
+    }
+    if (isSymbol(propType, propValue)) {
+      return 'symbol';
+    }
+    return propType;
+  }
+
+  // This handles more types than `getPropType`. Only used for error messages.
+  // See `createPrimitiveTypeChecker`.
+  function getPreciseType(propValue) {
+    if (typeof propValue === 'undefined' || propValue === null) {
+      return '' + propValue;
+    }
+    var propType = getPropType(propValue);
+    if (propType === 'object') {
+      if (propValue instanceof Date) {
+        return 'date';
+      } else if (propValue instanceof RegExp) {
+        return 'regexp';
+      }
+    }
+    return propType;
+  }
+
+  // Returns a string that is postfixed to a warning about an invalid type.
+  // For example, "undefined" or "of type array"
+  function getPostfixForTypeWarning(value) {
+    var type = getPreciseType(value);
+    switch (type) {
+      case 'array':
+      case 'object':
+        return 'an ' + type;
+      case 'boolean':
+      case 'date':
+      case 'regexp':
+        return 'a ' + type;
+      default:
+        return type;
+    }
+  }
+
+  // Returns class name of the object, if any.
+  function getClassName(propValue) {
+    if (!propValue.constructor || !propValue.constructor.name) {
+      return ANONYMOUS;
+    }
+    return propValue.constructor.name;
+  }
+
+  ReactPropTypes.checkPropTypes = checkPropTypes;
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+};
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2934,16 +5941,183 @@ if (process.env.NODE_ENV !== "production") {
 
 
 
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+var emptyFunction = __webpack_require__(5);
+var invariant = __webpack_require__(4);
+var ReactPropTypesSecret = __webpack_require__(12);
 
-module.exports = ReactPropTypesSecret;
+module.exports = function () {
+  function shim(props, propName, componentName, location, propFullName, secret) {
+    if (secret === ReactPropTypesSecret) {
+      // It is still safe when called from React.
+      return;
+    }
+    invariant(false, 'Calling PropTypes validators directly is not supported by the `prop-types` package. ' + 'Use PropTypes.checkPropTypes() to call them. ' + 'Read more at http://fb.me/use-check-prop-types');
+  };
+  shim.isRequired = shim;
+  function getShim() {
+    return shim;
+  };
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+  var ReactPropTypes = {
+    array: shim,
+    bool: shim,
+    func: shim,
+    number: shim,
+    object: shim,
+    string: shim,
+    symbol: shim,
+
+    any: shim,
+    arrayOf: getShim,
+    element: shim,
+    instanceOf: getShim,
+    node: shim,
+    objectOf: getShim,
+    oneOf: getShim,
+    oneOfType: getShim,
+    shape: getShim,
+    exact: getShim
+  };
+
+  ReactPropTypes.checkPropTypes = emptyFunction;
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+};
 
 /***/ }),
-/* 19 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/**
+ * Copyright 2015, Yahoo! Inc.
+ * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
+ */
+(function (global, factory) {
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' ? module.exports = factory() :  true ? !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
+				__WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : global.hoistNonReactStatics = factory();
+})(undefined, function () {
+    'use strict';
+
+    var REACT_STATICS = {
+        childContextTypes: true,
+        contextTypes: true,
+        defaultProps: true,
+        displayName: true,
+        getDefaultProps: true,
+        getDerivedStateFromProps: true,
+        mixins: true,
+        propTypes: true,
+        type: true
+    };
+
+    var KNOWN_STATICS = {
+        name: true,
+        length: true,
+        prototype: true,
+        caller: true,
+        callee: true,
+        arguments: true,
+        arity: true
+    };
+
+    var defineProperty = Object.defineProperty;
+    var getOwnPropertyNames = Object.getOwnPropertyNames;
+    var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+    var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+    var getPrototypeOf = Object.getPrototypeOf;
+    var objectPrototype = getPrototypeOf && getPrototypeOf(Object);
+
+    return function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
+        if (typeof sourceComponent !== 'string') {
+            // don't hoist over string (html) components
+
+            if (objectPrototype) {
+                var inheritedComponent = getPrototypeOf(sourceComponent);
+                if (inheritedComponent && inheritedComponent !== objectPrototype) {
+                    hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
+                }
+            }
+
+            var keys = getOwnPropertyNames(sourceComponent);
+
+            if (getOwnPropertySymbols) {
+                keys = keys.concat(getOwnPropertySymbols(sourceComponent));
+            }
+
+            for (var i = 0; i < keys.length; ++i) {
+                var key = keys[i];
+                if (!REACT_STATICS[key] && !KNOWN_STATICS[key] && (!blacklist || !blacklist[key])) {
+                    var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+                    try {
+                        // Avoid failures from read-only properties
+                        defineProperty(targetComponent, key, descriptor);
+                    } catch (e) {}
+                }
+            }
+
+            return targetComponent;
+        }
+
+        return targetComponent;
+    };
+});
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(35);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _App = __webpack_require__(44);
+
+var _App2 = _interopRequireDefault(_App);
+
+var _reactHotLoader = __webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+if (false) {
+    module.hot.accept('./components/containers/App', function () {
+        _reactDom2.default.render(_react2.default.createElement(
+            _reactHotLoader.AppContainer,
+            null,
+            _react2.default.createElement(_App2.default, null)
+        ), document.getElementById('app'));
+    });
+}
+_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('app'));
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module, process) {
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
 
 function checkDCE() {
   /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
@@ -2974,18 +6148,34 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(20);
+  module.exports = __webpack_require__(36);
 } else {
-  module.exports = __webpack_require__(23);
+  module.exports = __webpack_require__(39);
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(checkDCE, 'checkDCE', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/index.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module), __webpack_require__(2)))
 
 /***/ }),
-/* 20 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.3.2
+/* WEBPACK VAR INJECTION */(function(module) {/** @license React v16.3.2
  * react-dom.production.min.js
  *
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -3001,15 +6191,21 @@ if (process.env.NODE_ENV === 'production') {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var ba = __webpack_require__(2),
-    ea = __webpack_require__(1),
-    m = __webpack_require__(8),
-    A = __webpack_require__(4),
-    C = __webpack_require__(3),
-    fa = __webpack_require__(9),
-    ha = __webpack_require__(10),
-    ja = __webpack_require__(11),
-    ka = __webpack_require__(5);
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+var ba = __webpack_require__(4),
+    ea = __webpack_require__(3),
+    m = __webpack_require__(14),
+    A = __webpack_require__(6),
+    C = __webpack_require__(5),
+    fa = __webpack_require__(15),
+    ha = __webpack_require__(16),
+    ja = __webpack_require__(17),
+    ka = __webpack_require__(7);
 function D(a) {
   for (var b = arguments.length - 1, c = "http://reactjs.org/docs/error-decoder.html?invariant\x3d" + a, d = 0; d < b; d++) {
     c += "\x26args[]\x3d" + encodeURIComponent(arguments[d + 1]);
@@ -5215,13 +8411,338 @@ var Gg = { createPortal: Fg, findDOMNode: function findDOMNode(a) {
   } };
 X.injectIntoDevTools({ findFiberByHostInstance: Ua, bundleType: 0, version: "16.3.2", rendererPackageName: "react-dom" });var Hg = Object.freeze({ default: Gg }),
     Ig = Hg && Gg || Hg;module.exports = Ig["default"] ? Ig["default"] : Ig;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(D, "D", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ma, "ma", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(E, "E", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(na, "na", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(oa, "oa", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(pa, "pa", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(qa, "qa", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ta, "ta", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ra, "ra", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(sa, "sa", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ua, "ua", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(va, "va", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(wa, "wa", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(xa, "xa", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ca, "Ca", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Da, "Da", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ea, "Ea", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Fa, "Fa", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ga, "Ga", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ha, "Ha", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ia, "Ia", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ja, "Ja", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ka, "Ka", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(La, "La", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ma, "Ma", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Na, "Na", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Oa, "Oa", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Pa, "Pa", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Qa, "Qa", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ra, "Ra", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Sa, "Sa", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(F, "F", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ta, "Ta", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ua, "Ua", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Va, "Va", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Xa, "Xa", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(bb, "bb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(L, "L", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(cb, "cb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(db, "db", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(eb, "eb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(fb, "fb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(gb, "gb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(hb, "hb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ib, "ib", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(jb, "jb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(kb, "kb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(lb, "lb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(mb, "mb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(M, "M", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(nb, "nb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ob, "ob", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(pb, "pb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(qb, "qb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(N, "N", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(sb, "sb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(tb, "tb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(rb, "rb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ub, "ub", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(vb, "vb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(wb, "wb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(xb, "xb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(yb, "yb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(zb, "zb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ab, "Ab", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Bb, "Bb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Kb, "Kb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Lb, "Lb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Mb, "Mb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Nb, "Nb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ob, "Ob", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Pb, "Pb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Qb, "Qb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Rb, "Rb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Sb, "Sb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Tb, "Tb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ub, "Ub", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Vb, "Vb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Wb, "Wb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Xb, "Xb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Yb, "Yb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Zb, "Zb", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register($b, "$b", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ac, "ac", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(bc, "bc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(cc, "cc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(dc, "dc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ec, "ec", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(fc, "fc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(gc, "gc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(hc, "hc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ic, "ic", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(jc, "jc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(kc, "kc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(lc, "lc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(mc, "mc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(nc, "nc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(O, "O", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(oc, "oc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(pc, "pc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(qc, "qc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(rc, "rc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(sc, "sc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(tc, "tc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(uc, "uc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(vc, "vc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(wc, "wc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(xc, "xc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(yc, "yc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(zc, "zc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ac, "Ac", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Bc, "Bc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Cc, "Cc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Dc, "Dc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ec, "Ec", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Fc, "Fc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Gc, "Gc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Hc, "Hc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(U, "U", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(V, "V", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Sc, "Sc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Tc, "Tc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Uc, "Uc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Vc, "Vc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Wc, "Wc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Yc, "Yc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Zc, "Zc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ad, "ad", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register($c, "$c", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Xc, "Xc", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(bd, "bd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(cd, "cd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(dd, "dd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ed, "ed", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(fd, "fd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(gd, "gd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(hd, "hd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(id, "id", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(jd, "jd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(kd, "kd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ld, "ld", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(md, "md", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(nd, "nd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(od, "od", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(pd, "pd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(qd, "qd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(rd, "rd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(sd, "sd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(td, "td", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ud, "ud", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(vd, "vd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(wd, "wd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(xd, "xd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(yd, "yd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(zd, "zd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ad, "Ad", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Bd, "Bd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Cd, "Cd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Dd, "Dd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ed, "Ed", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Fd, "Fd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Gd, "Gd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Hd, "Hd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Id, "Id", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Jd, "Jd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Kd, "Kd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ld, "Ld", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Md, "Md", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Nd, "Nd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Od, "Od", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Pd, "Pd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Qd, "Qd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Rd, "Rd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Sd, "Sd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Td, "Td", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ud, "Ud", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Vd, "Vd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Wd, "Wd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(W, "W", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Zd, "Zd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Xd, "Xd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Yd, "Yd", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register($d, "$d", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ae, "ae", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(be, "be", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ce, "ce", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(de, "de", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ee, "ee", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(fe, "fe", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ge, "ge", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(he, "he", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ie, "ie", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(je, "je", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ke, "ke", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(le, "le", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(me, "me", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ne, "ne", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(oe, "oe", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(pe, "pe", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(qe, "qe", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(re, "re", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(se, "se", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(te, "te", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ue, "ue", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ve, "ve", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(xe, "xe", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ze, "ze", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ae, "Ae", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Be, "Be", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ce, "Ce", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(De, "De", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ee, "Ee", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Fe, "Fe", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ge, "Ge", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(He, "He", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ie, "Ie", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Je, "Je", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ke, "Ke", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Le, "Le", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Me, "Me", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ne, "Ne", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Oe, "Oe", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Pe, "Pe", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Qe, "Qe", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Re, "Re", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Se, "Se", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Te, "Te", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ue, "Ue", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ve, "Ve", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(We, "We", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Xe, "Xe", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ye, "Ye", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ze, "Ze", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register($e, "$e", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(af, "af", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(bf, "bf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(cf, "cf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(df, "df", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ef, "ef", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ff, "ff", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(gf, "gf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(hf, "hf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(jf, "jf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(kf, "kf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(lf, "lf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(mf, "mf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(nf, "nf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(of, "of", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(pf, "pf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(qf, "qf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(rf, "rf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(sf, "sf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(tf, "tf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(uf, "uf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(vf, "vf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(wf, "wf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(xf, "xf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(yf, "yf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(zf, "zf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Af, "Af", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Bf, "Bf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Cf, "Cf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Df, "Df", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ef, "Ef", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ff, "Ff", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Gf, "Gf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Hf, "Hf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(If, "If", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Jf, "Jf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Kf, "Kf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Lf, "Lf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Mf, "Mf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Nf, "Nf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Of, "Of", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Pf, "Pf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Qf, "Qf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Rf, "Rf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Sf, "Sf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Tf, "Tf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Uf, "Uf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Vf, "Vf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Wf, "Wf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Xf, "Xf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Yf, "Yf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Zf, "Zf", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register($f, "$f", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ag, "ag", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(bg, "bg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(cg, "cg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(dg, "dg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(eg, "eg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(fg, "fg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ng, "ng", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(og, "og", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(pg, "pg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(qg, "qg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(rg, "rg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(sg, "sg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(tg, "tg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(ug, "ug", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(vg, "vg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(X, "X", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Cg, "Cg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Dg, "Dg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Eg, "Eg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Fg, "Fg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Gg, "Gg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Hg, "Hg", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  reactHotLoader.register(Ig, "Ig", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/react-dom/cjs/react-dom.production.min.js");
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 21 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(module) {
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -5232,7 +8753,13 @@ X.injectIntoDevTools({ findFiberByHostInstance: Ua, bundleType: 0, version: "16.
  * @typechecks
  */
 
-var isNode = __webpack_require__(22);
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+var isNode = __webpack_require__(38);
 
 /**
  * @param {*} object The object to check.
@@ -5243,13 +8770,30 @@ function isTextNode(object) {
 }
 
 module.exports = isTextNode;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(isTextNode, 'isTextNode', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/isTextNode.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 22 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(module) {
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -5267,6 +8811,12 @@ module.exports = isTextNode;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
 function isNode(object) {
   var doc = object ? object.ownerDocument || object : document;
   var defaultView = doc.defaultView || window;
@@ -5274,9 +8824,26 @@ function isNode(object) {
 }
 
 module.exports = isNode;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(isNode, 'isNode', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/isNode.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 23 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5287,7 +8854,7 @@ module.exports = isNode;
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};if(process.env.NODE_ENV!=="production"){(function(){'use strict';var invariant=__webpack_require__(2);var React=__webpack_require__(1);var warning=__webpack_require__(6);var ExecutionEnvironment=__webpack_require__(8);var _assign=__webpack_require__(4);var emptyFunction=__webpack_require__(3);var checkPropTypes=__webpack_require__(7);var getActiveElement=__webpack_require__(9);var shallowEqual=__webpack_require__(10);var containsNode=__webpack_require__(11);var emptyObject=__webpack_require__(5);var hyphenateStyleName=__webpack_require__(24);var camelizeStyleName=__webpack_require__(26);// Relying on the `invariant()` implementation lets us
+ */var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};if(process.env.NODE_ENV!=="production"){(function(){'use strict';var invariant=__webpack_require__(4);var React=__webpack_require__(3);var warning=__webpack_require__(8);var ExecutionEnvironment=__webpack_require__(14);var _assign=__webpack_require__(6);var emptyFunction=__webpack_require__(5);var checkPropTypes=__webpack_require__(11);var getActiveElement=__webpack_require__(15);var shallowEqual=__webpack_require__(16);var containsNode=__webpack_require__(17);var emptyObject=__webpack_require__(7);var hyphenateStyleName=__webpack_require__(40);var camelizeStyleName=__webpack_require__(42);// Relying on the `invariant()` implementation lets us
 // have preserve the format and params in the www builds.
 !React?invariant(false,'ReactDOM was loaded before React. Make sure you load the React package before loading ReactDOM.'):void 0;var invokeGuardedCallback=function invokeGuardedCallback(name,func,context,a,b,c,d,e,f){this._hasCaughtError=false;this._caughtError=null;var funcArgs=Array.prototype.slice.call(arguments,3);try{func.apply(context,funcArgs);}catch(error){this._caughtError=error;this._hasCaughtError=true;}};{// In DEV mode, we swap out invokeGuardedCallback for a special version
 // that plays more nicely with the browser's DevTools. The idea is to preserve
@@ -8203,14 +11770,14 @@ if(navigator.userAgent.indexOf('Chrome')>-1&&navigator.userAgent.indexOf('Edge')
 if(/^(https?|file):$/.test(protocol)){console.info('%cDownload the React DevTools '+'for a better development experience: '+'https://fb.me/react-devtools'+(protocol==='file:'?'\nYou might need to use a local HTTP server (instead of file://): '+'https://fb.me/react-devtools-faq':''),'font-weight:bold');}}}}var ReactDOM$2=Object.freeze({default:ReactDOM});var ReactDOM$3=ReactDOM$2&&ReactDOM||ReactDOM$2;// TODO: decide on the top-level export form.
 // This is hacky but makes it work with both Rollup and Jest.
 var reactDom=ReactDOM$3['default']?ReactDOM$3['default']:ReactDOM$3;module.exports=reactDom;})();}
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 24 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/**
+/* WEBPACK VAR INJECTION */(function(module) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
  * This source code is licensed under the MIT license found in the
@@ -8221,7 +11788,13 @@ var reactDom=ReactDOM$3['default']?ReactDOM$3['default']:ReactDOM$3;module.expor
 
 
 
-var hyphenate = __webpack_require__(25);
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+var hyphenate = __webpack_require__(41);
 
 var msPattern = /^ms-/;
 
@@ -8246,13 +11819,31 @@ function hyphenateStyleName(string) {
 }
 
 module.exports = hyphenateStyleName;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(msPattern, 'msPattern', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/hyphenateStyleName.js');
+  reactHotLoader.register(hyphenateStyleName, 'hyphenateStyleName', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/hyphenateStyleName.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 25 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(module) {
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -8262,6 +11853,12 @@ module.exports = hyphenateStyleName;
  *
  * @typechecks
  */
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
 
 var _uppercasePattern = /([A-Z])/g;
 
@@ -8282,13 +11879,31 @@ function hyphenate(string) {
 }
 
 module.exports = hyphenate;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(_uppercasePattern, '_uppercasePattern', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/hyphenate.js');
+  reactHotLoader.register(hyphenate, 'hyphenate', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/hyphenate.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 26 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/**
+/* WEBPACK VAR INJECTION */(function(module) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
  * This source code is licensed under the MIT license found in the
@@ -8299,7 +11914,13 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(27);
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+var camelize = __webpack_require__(43);
 
 var msPattern = /^-ms-/;
 
@@ -8325,13 +11946,31 @@ function camelizeStyleName(string) {
 }
 
 module.exports = camelizeStyleName;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(msPattern, 'msPattern', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/camelizeStyleName.js');
+  reactHotLoader.register(camelizeStyleName, 'camelizeStyleName', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/camelizeStyleName.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 27 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(module) {
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -8341,6 +11980,12 @@ module.exports = camelizeStyleName;
  *
  * @typechecks
  */
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
 
 var _hyphenPattern = /-(.)/g;
 
@@ -8360,13 +12005,31 @@ function camelize(string) {
 }
 
 module.exports = camelize;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(_hyphenPattern, "_hyphenPattern", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/camelize.js");
+  reactHotLoader.register(camelize, "camelize", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/fbjs/lib/camelize.js");
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 28 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(module) {
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -8374,23 +12037,37 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Title = __webpack_require__(29);
+var _Title = __webpack_require__(45);
 
 var _Title2 = _interopRequireDefault(_Title);
 
-var _App = __webpack_require__(12);
+var _App = __webpack_require__(18);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _TodoList = __webpack_require__(32);
+var _TodoList = __webpack_require__(48);
 
 var _TodoList2 = _interopRequireDefault(_TodoList);
 
+var _TodoForm = __webpack_require__(54);
+
+var _TodoForm2 = _interopRequireDefault(_TodoForm);
+
+var _uuid = __webpack_require__(57);
+
+var _uuid2 = _interopRequireDefault(_uuid);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(function () {
+    var enterModule = __webpack_require__(0).enterModule;
+
+    enterModule && enterModule(module);
+})();
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
@@ -8407,6 +12084,15 @@ var App = function (_React$Component) {
         _classCallCheck(this, App);
 
         var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+        _this.addTodo = function (val) {
+            var toDo = {
+                text: val,
+                id: _uuid2.default.v4()
+            };
+            var data = [].concat(_toConsumableArray(_this.state.data), [toDo]);
+            _this.setState({ data: data });
+        };
 
         _this.removeTodo = function (id) {
             var reminder = _this.state.data.filter(function (todo) {
@@ -8431,52 +12117,73 @@ var App = function (_React$Component) {
     }
 
     _createClass(App, [{
-        key: "addTodo",
-        value: function addTodo(val) {
-            var toDo = {
-                text: val,
-                id: uuid.v4()
-            };
-            var data = [].concat(_toConsumableArray(this.state.data), [toDo]);
-            this.setState({ data: data });
-        }
-    }, {
         key: "render",
         value: function render() {
             return _react2.default.createElement(
                 "div",
                 { className: _App2.default.ToDoApp },
                 _react2.default.createElement(_Title2.default, { text: "To Do", amount: this.state.data.length }),
+                _react2.default.createElement(_TodoForm2.default, { add: this.addTodo }),
                 _react2.default.createElement(_TodoList2.default, { thingsToDo: this.state.data, remove: this.removeTodo })
             );
+        }
+    }, {
+        key: "__reactstandin__regenerateByEval",
+        value: function __reactstandin__regenerateByEval(key, code) {
+            this[key] = eval(code);
         }
     }]);
 
     return App;
 }(_react2.default.Component);
 
-exports.default = App;
+var _default = App;
+exports.default = _default;
+;
+
+(function () {
+    var reactHotLoader = __webpack_require__(0).default;
+
+    var leaveModule = __webpack_require__(0).leaveModule;
+
+    if (!reactHotLoader) {
+        return;
+    }
+
+    reactHotLoader.register(App, "App", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/src/components/containers/App.js");
+    reactHotLoader.register(_default, "default", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/src/components/containers/App.js");
+    leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 29 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(module) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _App = __webpack_require__(12);
+var _App = __webpack_require__(18);
 
 var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
 
 var Title = function Title(props) {
   return _react2.default.createElement(
@@ -8487,18 +12194,37 @@ var Title = function Title(props) {
     props.amount
   );
 };
-exports.default = Title;
+var _default = Title;
+exports.default = _default;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(Title, "Title", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/src/components/Title.js");
+  reactHotLoader.register(_default, "default", "C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/src/components/Title.js");
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 30 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)(false);
+exports = module.exports = __webpack_require__(9)(false);
 // imports
 
 
 // module
-exports.push([module.i, "._3NcdJIesuP8BQrMWDTkd3u {\r\n    background-color: #292730;\r\n    color: #FFFFFF;\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: nowrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    align-content: center;\r\n    width: 100vw;\r\n    height: 100vh;\r\n}\r\n._1rStprX1wYXxtCx4uV6AKU {\r\n    font-size: 5em;\r\n}", ""]);
+exports.push([module.i, "._3NcdJIesuP8BQrMWDTkd3u {\r\n    background-color: #292730;\r\n    color: #FFFFFF;\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-wrap: nowrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    align-content: center;\r\n    width: 100vw;\r\n    height: 100vh;\r\n}\r\n._1rStprX1wYXxtCx4uV6AKU {\r\n    font-size: 5em;\r\n    color: #ce23ae;\r\n}", ""]);
 
 // exports
 exports.locals = {
@@ -8507,7 +12233,7 @@ exports.locals = {
 };
 
 /***/ }),
-/* 31 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8602,35 +12328,39 @@ module.exports = function (css) {
 };
 
 /***/ }),
-/* 32 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(module) {
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TodoList = __webpack_require__(33);
+var _TodoList = __webpack_require__(49);
 
 var _TodoList2 = _interopRequireDefault(_TodoList);
 
+var _Todo = __webpack_require__(51);
+
+var _Todo2 = _interopRequireDefault(_Todo);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(function () {
+    var enterModule = __webpack_require__(0).enterModule;
+
+    enterModule && enterModule(module);
+})();
 
 var TodoList = function TodoList(props) {
     var list = props.thingsToDo.map(function (value) {
-        return _react2.default.createElement(
-            'li',
-            { key: value.id, onClick: function onClick() {
-                    return props.remove(value.id);
-                } },
-            value.text
-        );
+        return _react2.default.createElement(_Todo2.default, { key: value.id, id: value.id, remove: props.remove, text: value.text });
     });
     return _react2.default.createElement(
         'ul',
@@ -8638,14 +12368,33 @@ var TodoList = function TodoList(props) {
         list
     );
 };
-exports.default = TodoList;
+var _default = TodoList;
+exports.default = _default;
+;
+
+(function () {
+    var reactHotLoader = __webpack_require__(0).default;
+
+    var leaveModule = __webpack_require__(0).leaveModule;
+
+    if (!reactHotLoader) {
+        return;
+    }
+
+    reactHotLoader.register(TodoList, 'TodoList', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/src/components/TodoList.js');
+    reactHotLoader.register(_default, 'default', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/src/components/TodoList.js');
+    leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ }),
-/* 33 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(34);
+var content = __webpack_require__(50);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -8659,7 +12408,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(14)(content, options);
+var update = __webpack_require__(10)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -8691,10 +12440,10 @@ if(false) {
 }
 
 /***/ }),
-/* 34 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)(false);
+exports = module.exports = __webpack_require__(9)(false);
 // imports
 
 
@@ -8705,6 +12454,539 @@ exports.push([module.i, "._3o6JDxT7SiznYCgu6_pbvx {\r\n    font-size:2em;\r\n   
 exports.locals = {
 	"ToDoList": "_3o6JDxT7SiznYCgu6_pbvx"
 };
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Todo = __webpack_require__(52);
+
+var _Todo2 = _interopRequireDefault(_Todo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(function () {
+    var enterModule = __webpack_require__(0).enterModule;
+
+    enterModule && enterModule(module);
+})();
+
+var Todo = function Todo(props) {
+    return _react2.default.createElement(
+        'li',
+        { className: _Todo2.default.todoElement, onClick: function onClick() {
+                return props.remove(props.id);
+            } },
+        props.text
+    );
+};
+var _default = Todo;
+exports.default = _default;
+;
+
+(function () {
+    var reactHotLoader = __webpack_require__(0).default;
+
+    var leaveModule = __webpack_require__(0).leaveModule;
+
+    if (!reactHotLoader) {
+        return;
+    }
+
+    reactHotLoader.register(Todo, 'Todo', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/src/components/Todo.js');
+    reactHotLoader.register(_default, 'default', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/src/components/Todo.js');
+    leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(53);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(10)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!./Todo.css", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!./Todo.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)(false);
+// imports
+
+
+// module
+exports.push([module.i, "._2xxCwYdXMdXDIYj8dwoHkn {\r\n    margin-top: 15px;\r\n    border: 2px dashed #ce23ae;\r\n    padding: 10px;\r\n    text-align: center;\r\n}", ""]);
+
+// exports
+exports.locals = {
+	"todoElement": "_2xxCwYdXMdXDIYj8dwoHkn"
+};
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _TodoForm = __webpack_require__(55);
+
+var _TodoForm2 = _interopRequireDefault(_TodoForm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(function () {
+    var enterModule = __webpack_require__(0).enterModule;
+
+    enterModule && enterModule(module);
+})();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TodoForm = function (_React$Component) {
+    _inherits(TodoForm, _React$Component);
+
+    function TodoForm(props) {
+        _classCallCheck(this, TodoForm);
+
+        var _this = _possibleConstructorReturn(this, (TodoForm.__proto__ || Object.getPrototypeOf(TodoForm)).call(this, props));
+
+        _this.handleAddTask = function () {
+            var input = document.getElementById('addTask');
+            if (!input.value.length) {
+                input.placeholder = 'Set your task';
+            } else {
+                _this.props.add(input.value);
+                input.value = "";
+            }
+        };
+
+        return _this;
+    }
+
+    _createClass(TodoForm, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'form',
+                { onSubmit: function onSubmit(e) {
+                        return e.preventDefault();
+                    } },
+                _react2.default.createElement('input', { className: _TodoForm2.default.TodoInput, type: 'text', name: 'task', id: 'addTask', placeholder: 'type your task...' }),
+                _react2.default.createElement(
+                    'button',
+                    { type: 'submit', className: _TodoForm2.default.TodoSubmit, onClick: this.handleAddTask },
+                    'Add task'
+                )
+            );
+        }
+    }, {
+        key: '__reactstandin__regenerateByEval',
+        value: function __reactstandin__regenerateByEval(key, code) {
+            this[key] = eval(code);
+        }
+    }]);
+
+    return TodoForm;
+}(_react2.default.Component);
+
+var _default = TodoForm;
+exports.default = _default;
+;
+
+(function () {
+    var reactHotLoader = __webpack_require__(0).default;
+
+    var leaveModule = __webpack_require__(0).leaveModule;
+
+    if (!reactHotLoader) {
+        return;
+    }
+
+    reactHotLoader.register(TodoForm, 'TodoForm', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/src/components/TodoForm.js');
+    reactHotLoader.register(_default, 'default', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/src/components/TodoForm.js');
+    leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(56);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(10)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!./TodoForm.css", function() {
+		var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!./TodoForm.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".VhMjKwdqoCsNgO3gu56vm {\r\n    background-color:transparent;\r\n    margin-left: 20px;\r\n    color: #ce23ae;\r\n    padding: 10px 20px;\r\n    outline: none;\r\n    border: 1px solid #ce23ae;\r\n    transition: transform .3s ease-in;\r\n}\r\n.VhMjKwdqoCsNgO3gu56vm:hover {\r\n    transform: scale(1.1);\r\n}\r\n.F-hv_SBuIMaH5EzZuJ0td {\r\n    height: 30px;\r\n    font-size: 1em;\r\n}", ""]);
+
+// exports
+exports.locals = {
+	"TodoSubmit": "VhMjKwdqoCsNgO3gu56vm",
+	"TodoInput": "F-hv_SBuIMaH5EzZuJ0td"
+};
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+var v1 = __webpack_require__(58);
+var v4 = __webpack_require__(59);
+
+var uuid = v4;
+uuid.v1 = v1;
+uuid.v4 = v4;
+
+module.exports = uuid;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(uuid, 'uuid', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/uuid/index.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+var rng = __webpack_require__(19);
+var bytesToUuid = __webpack_require__(20);
+
+// **`v1()` - Generate time-based UUID**
+//
+// Inspired by https://github.com/LiosK/UUID.js
+// and http://docs.python.org/library/uuid.html
+
+var _nodeId;
+var _clockseq;
+
+// Previous uuid creation time
+var _lastMSecs = 0;
+var _lastNSecs = 0;
+
+// See https://github.com/broofa/node-uuid for API details
+function v1(options, buf, offset) {
+  var i = buf && offset || 0;
+  var b = buf || [];
+
+  options = options || {};
+  var node = options.node || _nodeId;
+  var clockseq = options.clockseq !== undefined ? options.clockseq : _clockseq;
+
+  // node and clockseq need to be initialized to random values if they're not
+  // specified.  We do this lazily to minimize issues related to insufficient
+  // system entropy.  See #189
+  if (node == null || clockseq == null) {
+    var seedBytes = rng();
+    if (node == null) {
+      // Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
+      node = _nodeId = [seedBytes[0] | 0x01, seedBytes[1], seedBytes[2], seedBytes[3], seedBytes[4], seedBytes[5]];
+    }
+    if (clockseq == null) {
+      // Per 4.2.2, randomize (14 bit) clockseq
+      clockseq = _clockseq = (seedBytes[6] << 8 | seedBytes[7]) & 0x3fff;
+    }
+  }
+
+  // UUID timestamps are 100 nano-second units since the Gregorian epoch,
+  // (1582-10-15 00:00).  JSNumbers aren't precise enough for this, so
+  // time is handled internally as 'msecs' (integer milliseconds) and 'nsecs'
+  // (100-nanoseconds offset from msecs) since unix epoch, 1970-01-01 00:00.
+  var msecs = options.msecs !== undefined ? options.msecs : new Date().getTime();
+
+  // Per 4.2.1.2, use count of uuid's generated during the current clock
+  // cycle to simulate higher resolution clock
+  var nsecs = options.nsecs !== undefined ? options.nsecs : _lastNSecs + 1;
+
+  // Time since last uuid creation (in msecs)
+  var dt = msecs - _lastMSecs + (nsecs - _lastNSecs) / 10000;
+
+  // Per 4.2.1.2, Bump clockseq on clock regression
+  if (dt < 0 && options.clockseq === undefined) {
+    clockseq = clockseq + 1 & 0x3fff;
+  }
+
+  // Reset nsecs if clock regresses (new clockseq) or we've moved onto a new
+  // time interval
+  if ((dt < 0 || msecs > _lastMSecs) && options.nsecs === undefined) {
+    nsecs = 0;
+  }
+
+  // Per 4.2.1.2 Throw error if too many uuids are requested
+  if (nsecs >= 10000) {
+    throw new Error('uuid.v1(): Can\'t create more than 10M uuids/sec');
+  }
+
+  _lastMSecs = msecs;
+  _lastNSecs = nsecs;
+  _clockseq = clockseq;
+
+  // Per 4.1.4 - Convert from unix epoch to Gregorian epoch
+  msecs += 12219292800000;
+
+  // `time_low`
+  var tl = ((msecs & 0xfffffff) * 10000 + nsecs) % 0x100000000;
+  b[i++] = tl >>> 24 & 0xff;
+  b[i++] = tl >>> 16 & 0xff;
+  b[i++] = tl >>> 8 & 0xff;
+  b[i++] = tl & 0xff;
+
+  // `time_mid`
+  var tmh = msecs / 0x100000000 * 10000 & 0xfffffff;
+  b[i++] = tmh >>> 8 & 0xff;
+  b[i++] = tmh & 0xff;
+
+  // `time_high_and_version`
+  b[i++] = tmh >>> 24 & 0xf | 0x10; // include version
+  b[i++] = tmh >>> 16 & 0xff;
+
+  // `clock_seq_hi_and_reserved` (Per 4.2.2 - include variant)
+  b[i++] = clockseq >>> 8 | 0x80;
+
+  // `clock_seq_low`
+  b[i++] = clockseq & 0xff;
+
+  // `node`
+  for (var n = 0; n < 6; ++n) {
+    b[i + n] = node[n];
+  }
+
+  return buf ? buf : bytesToUuid(b);
+}
+
+module.exports = v1;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(_nodeId, '_nodeId', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/uuid/v1.js');
+  reactHotLoader.register(_clockseq, '_clockseq', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/uuid/v1.js');
+  reactHotLoader.register(_lastMSecs, '_lastMSecs', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/uuid/v1.js');
+  reactHotLoader.register(_lastNSecs, '_lastNSecs', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/uuid/v1.js');
+  reactHotLoader.register(v1, 'v1', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/uuid/v1.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+(function () {
+  var enterModule = __webpack_require__(0).enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+var rng = __webpack_require__(19);
+var bytesToUuid = __webpack_require__(20);
+
+function v4(options, buf, offset) {
+  var i = buf && offset || 0;
+
+  if (typeof options == 'string') {
+    buf = options === 'binary' ? new Array(16) : null;
+    options = null;
+  }
+  options = options || {};
+
+  var rnds = options.random || (options.rng || rng)();
+
+  // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+  rnds[6] = rnds[6] & 0x0f | 0x40;
+  rnds[8] = rnds[8] & 0x3f | 0x80;
+
+  // Copy bytes to buffer, if provided
+  if (buf) {
+    for (var ii = 0; ii < 16; ++ii) {
+      buf[i + ii] = rnds[ii];
+    }
+  }
+
+  return buf || bytesToUuid(rnds);
+}
+
+module.exports = v4;
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__(0).default;
+
+  var leaveModule = __webpack_require__(0).leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(v4, 'v4', 'C:/Users/kaleb/Desktop/webdev/pk/16.Webpack/TodoApp/node_modules/uuid/v4.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ })
 /******/ ]);
