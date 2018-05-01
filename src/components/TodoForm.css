@@ -1,0 +1,16 @@
+.TodoSubmit {
+    background-color:transparent;
+    margin-left: 20px;
+    color: #ce23ae;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #ce23ae;
+    transition: transform .3s ease-in;
+}
+.TodoSubmit:hover {
+    transform: scale(1.1);
+}
+.TodoInput {
+    height: 30px;
+    font-size: 1em;
+}

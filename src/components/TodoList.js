@@ -1,8 +1,9 @@
 import React from 'react';
-import style from './TodoList.css'
+import style from './TodoList.css';
+import Todo from './Todo';
 const TodoList = props => {
     let list = props.thingsToDo.map(value =>
-    <li key={value.id} onClick={()=>props.remove(value.id)}>{value.text}</li>);
+    <Todo key={value.id} id={value.id} remove = {props.remove} text={value.text}/>);
 return <ul className={style.ToDoList}>{list}</ul>
 }
-export default TodoList;
+export default TodoList;    
